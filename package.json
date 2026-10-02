@@ -4,7 +4,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:db": "DB_TESTS=1 vitest run tests/db",
+    "desk": "tsx --env-file=.env.local scripts/research-desk.ts",
+    "leak-check": "tsx --env-file=.env.local scripts/leak-check.ts"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.1",
