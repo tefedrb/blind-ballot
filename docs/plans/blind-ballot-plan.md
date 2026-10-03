@@ -8,7 +8,7 @@ status: approved 2026-09-30; revised 2026-10-02 after the pre-flight review and 
 
 # Blind Ballot Implementation Plan
 
-> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Work directly on `main`, one step at a time: no branches, no worktrees, and no finishing-a-development-branch step. Build test-first, with the game's rules in a pure domain core: see "Test-driven and domain-driven" below. The repo's `CLAUDE.md` has the details.
+> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Work directly on `main`, one step at a time: no branches, no worktrees, and no finishing-a-development-branch step. Build test-first, with the game's rules in a pure domain core: see "Test-driven and domain-driven" below. At every task boundary, update `docs/plans/handoff.md` and suggest a `/clear`. The repo's `CLAUDE.md` has the details.
 
 **Goal:** Build and deploy Blind Ballot v1 in 2 hours. Users support or oppose party-platform promises with the labels removed, guess each one's party, and get an honest verdict. There are two rounds of 12 cards, one for each half of a 24-card deck.
 
@@ -63,6 +63,7 @@ status: approved 2026-09-30; revised 2026-10-02 after the pre-flight review and 
     - decisions move out of pages, actions and scripts into a pure domain core;
     - a new test keeps the core free of I/O.
   - Task 2's migration was written before its database checks, so that step had no red run.
+  - **Handoff and clear at task boundaries:** at the end of each task, Claude rewrites `docs/plans/handoff.md`, commits it, and suggests a `/clear`. The next session starts from the handoff and the repo, not from a compacted summary.
 
 ---
 
@@ -118,6 +119,7 @@ There are two bounded contexts. **Deck authoring** is the scripts, `content/`, `
   - Vercel's build type-checks the tests and scripts too, so one type error blocks the deploy.
 - **Schema changes mid-build:** edit `supabase/migrations/0001_init.sql` first, then re-run only the changed statements in the SQL editor. The repo must match the live database at submission.
 - **A bad push late in the build:** use Vercel's Instant Rollback to the last good deployment. Don't debug against the clock.
+- **Context: handoff and clear at task boundaries.** A long session piles up tool output, and auto-compact keeps only a summary of the conversation. So at the end of each task, after its last commit, Claude rewrites `docs/plans/handoff.md`, commits and pushes it, and suggests a `/clear`. To resume, type: `Resume Blind Ballot: read CLAUDE.md and docs/plans/handoff.md.` Auto-compact stays on as the safety net. The repo's `CLAUDE.md`, "Context", has the full rule.
 - **Commits:** commit at every step marked **Commit** and after any other change that stands on its own, and push after each commit so Vercel redeploys. The repo's `CLAUDE.md`, "Saving work", has the full rule.
 - **Traps to check in every diff:**
   - `redirect()` and `notFound()` throw, so they go outside any `try`/`catch`.
@@ -486,6 +488,8 @@ Run: `mkdir -p research && npm run desk > research/desk.log 2>&1`, as a backgrou
 When the first line appears, read the log. The Libertarian line comes first, because its source is the shortest. Expected: a line like `L: 15 proposed · 14 quote ok · 1 flagged · claude-opus-5-5`. If there's no line, or there's an error, fix it before going on.
 **Commit:** `feat: Research Desk script with quote check`. This commit has only the scripts, the prompt and the tests; the outputs are committed in Task 5.
 
+**Handoff:** rewrite `docs/plans/handoff.md`, commit and push it, then suggest a `/clear` before Task 4. Note whether the Desk is still running in the background, and where its log is.
+
 ---
 
 ## Task 4: The game loop on placeholder cards (0:30–0:55)
@@ -628,6 +632,8 @@ The rule is domain, and the proxy is plumbing:
 
 **Commit:** `feat: dealer, deck boundary, route access and game loop`, then push.
 
+**Handoff:** rewrite `docs/plans/handoff.md`, commit and push it, then suggest a `/clear` before Task 5.
+
 ---
 
 ## Task 5: The real deck, the deck tests and the bare results page — the MVP line (0:55–1:10)
@@ -688,6 +694,8 @@ Expected: 12 real cards, the lock-in screen, then the card-by-card reveal. **Thi
 - which model served.
 
 **Commit:** `feat: 24-card deck from the Research Desk, with deck tests and the reveal`
+
+**Handoff:** rewrite `docs/plans/handoff.md`, commit and push it, then suggest a `/clear` before Task 6.
 
 ---
 
@@ -805,6 +813,8 @@ Rerun. Expected: PASS.
 **Commit:** `feat: results, verdict engine, round 2, save, sign-in and share`. Push, then check rounds 1 and 2 and their results on
 prod.
 
+**Handoff:** rewrite `docs/plans/handoff.md`, commit and push it, then suggest a `/clear` before Task 7.
+
 ---
 
 ## Task 7: The leak check — first to cut (1:35–1:45)
@@ -856,6 +866,8 @@ Expected: neutral accuracy above chance, because Claude knows these platforms an
 
 For each flagged card, Claude says whether its cues are wording or policy and proposes a rewrite when they're wording. You decide which rewrites go in. Any flagged card left as it is goes under "What's incomplete".
 **Commit:** `feat: leak check and report`
+
+**Handoff:** rewrite `docs/plans/handoff.md`, commit and push it, then suggest a `/clear` before Task 8.
 
 ---
 

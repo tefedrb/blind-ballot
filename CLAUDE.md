@@ -36,6 +36,18 @@ At a **[Claude → you check]** step, show me the red run as well as the green o
   - **A round** owns its answers. The database enforces its rules: 12 cards, one answer per card, insert-only answers, and a reveal only once every card is answered.
   - **The deck's** rules (promise 4) are enforced by the deck tests.
 
+## Context: handoff and clear at task boundaries
+
+A long session piles up tool output and dead ends, and auto-compact keeps only a summary of the conversation. So we reset at task boundaries instead, starting from a note we wrote on purpose, plus the repo.
+
+- **At the start of every session,** before anything else, read `docs/plans/handoff.md` and `git log --oneline -10`.
+- **At the end of every task,** after its last commit:
+  1. Rewrite `docs/plans/handoff.md`: where we are, what's next, what's waiting on me, any decisions or departures from the plan that aren't recorded elsewhere, and gotchas. It holds the current state only; git has the history.
+  2. Commit it, and push.
+  3. Tell me it's a good place to `/clear`, and give me the resume line: `Resume Blind Ballot: read CLAUDE.md and docs/plans/handoff.md.`
+- **Mid-task,** if I ask to clear, do the same, and say which step is half-done and what's uncommitted.
+- Auto-compact stays on as the safety net.
+
 ## Saving work (commit and push)
 
 Every time the plan says **Commit**, and after any other change that stands on its own:
