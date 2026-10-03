@@ -52,6 +52,26 @@ Unlike the handoff, which is private and holds only the current state, this file
 
 ## Decided
 
+### The flagged cards: which to rewrite
+
+- **Raised:** 2026-10-03, the leak check's card-by-card review (plan, Task 7, Step 3).
+- **The test:** a cue is wording when the policy can be stated without it, and it carries one side's framing or a reason. Repeating the platform's own plain words isn't a cue by itself.
+- **Claude's sort:**
+  - **Wording:** card-16 ("return control of schooling" assumes Washington runs schooling now), card-17 ("like other debt" is an argument, rule 5) and card-20 ("defund" where card-10 says "cut federal funding", rule 7).
+  - **Borderline:** card-13 ("community violence intervention": one side's term under rule 3, but the funding line's name under rule 6), card-05 ("not just Medicare enrollees" points to the law that set the Medicare cap) and card-07 ("voluntary", a word the Libertarian platform uses throughout).
+  - **Policy:** the other 15. On cards 11, 12 and 21, a detail of the policy itself gives away the counter-type card; trimming it would misstate the plank.
+- **Decided:** 2026-10-03. All six rewrites, then a rerun of the leak check. The rerun gave the same result: 21 of 24 on the statements, 24 of 24 on the quotes and the same 21 cards flagged, so the policies carry them. Its console output, stderr included, shows no retries. README §7 and `/how-it-works` describe the review, and "What's incomplete" no longer lists it. Commit `2ac6c28`.
+
+### Difficulty levels and local decks
+
+- **Raised:** 2026-10-03, during the flagged-card review. Three new directions: a difficulty setting based on how easy a card's party is to guess, cards from current legislation through an API, and decks by ZIP code or city that start wide and narrow as players join.
+- **Decided:** 2026-10-03. Capture them in both my private notes and README "What I'd build next":
+  - **Difficulty levels** go under "Labels and spin". The level comes from the policy, never from spin: neutral wording is the floor at every level. The leak check's sureness gives each card a first score, and players' guesses replace it.
+  - **Current legislation** extends the daily deck: a card's party comes from the bill's sponsors, and bipartisan bills and Libertarian cards need their own rules.
+  - **Local decks** go under "New cards". This widens the earlier location call ("state only… no city", in "What I'd build next" below) for decks; where you rank stays state only.
+
+  Commit `c22ac4d`.
+
 ### A private space, and the handoff moves into it
 
 - **Raised:** 2026-10-03, after Task 8. I want a place for notes about the project that stay between me and Claude, and the handoff belongs there from now on. The plan's "Handoff" lines say to commit and push it.
