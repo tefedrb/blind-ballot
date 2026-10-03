@@ -4,6 +4,8 @@
 
 ## Why I built it
 
+Party labels change how people judge a policy. In Geoffrey Cohen's 2003 study "Party over Policy", people backed whichever welfare policy their own party endorsed, whatever it said, and denied that the label had swayed them. Blind Ballot takes the label off, so you judge the policy itself. At the end, you see each party's own words.
+
 ## What works
 
 ## What's incomplete

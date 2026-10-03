@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { nextStep, type PlayerState } from "@/lib/next-step";
+import { nextCard, nextStep, type PlayerState } from "@/lib/next-step";
 
 const state = (overrides: Partial<PlayerState> = {}): PlayerState => ({
   unrevealedRoundId: null,
@@ -37,5 +37,22 @@ describe("nextStep", () => {
   it("deals round 1, then round 2", () => {
     expect(nextStep(state())).toEqual({ kind: "deal", round: 1 });
     expect(nextStep(state({ revealedRoundIds: ["r1"] }))).toEqual({ kind: "deal", round: 2 });
+  });
+});
+
+describe("nextCard", () => {
+  const dealt = ["a", "b", "c"];
+
+  it("gives the first card in deal order, numbered from 1", () => {
+    expect(nextCard(dealt, [])).toEqual({ plankId: "a", number: 1 });
+  });
+
+  it("skips the cards already answered", () => {
+    expect(nextCard(dealt, ["a"])).toEqual({ plankId: "b", number: 2 });
+    expect(nextCard(dealt, ["b"])).toEqual({ plankId: "a", number: 1 });
+  });
+
+  it("gives null once every card is answered", () => {
+    expect(nextCard(dealt, ["c", "a", "b"])).toBeNull();
   });
 });

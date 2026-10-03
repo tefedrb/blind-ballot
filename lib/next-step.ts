@@ -25,3 +25,13 @@ export function nextStep(state: PlayerState): NextStep {
   if (!state.statedParty) return { kind: "choose-party" };
   return { kind: "deal", round: state.revealedRoundIds.length === 0 ? 1 : 2 };
 }
+
+// The round's first unanswered card in deal order, so a refresh resumes where
+// the player left off. Null once every card is answered: time for the reveal.
+export function nextCard(
+  plankIds: string[],
+  answeredIds: string[],
+): { plankId: string; number: number } | null {
+  const index = plankIds.findIndex((id) => !answeredIds.includes(id));
+  return index === -1 ? null : { plankId: plankIds[index], number: index + 1 };
+}
