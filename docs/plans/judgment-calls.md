@@ -123,3 +123,7 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 
 - **Raised:** 2026-10-02, Task 3, Step 5, a **[Claude → you check]** step.
 - **Decided:** 2026-10-02. Skip the walkthrough for now, run the Desk, and review commit `fbaa422` later.
+- **Reviewed:** 2026-10-03. It looks good for now; I'll come back and refine it after the sprint.
+  - **Fixed:** a bare `--party` ran all three platforms. It now stops before any call. Commit `9921b31`.
+  - **No code checks a card's section heading.** The 24 cards' headings were checked by hand: each appears in its platform before the quote.
+  - **The prompt's small departures from spec § 7 stay:** "ideally 12 to 16" words, "an editor will keep about 8", rule 7's wording, and the 12 topics given only through the output schema.
