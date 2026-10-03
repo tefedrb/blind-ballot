@@ -139,4 +139,11 @@ describe("row-level security", { timeout: 20_000 }, () => {
     const { data } = await admin.from("answers").select("vote").eq("round_id", roundId);
     expect(data).toEqual([{ vote: "support" }]);
   });
+
+  it("6. the server can't deal A the same seed twice, so A gets at most two rounds", async () => {
+    // Revealed, so the one-unrevealed-round index isn't what stops the second deal.
+    await dealRound(a.id, true);
+
+    await expect(dealRound(a.id)).rejects.toMatchObject({ code: "23505" });
+  });
 });

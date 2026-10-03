@@ -21,7 +21,10 @@ create table public.rounds (
   seed text not null,
   plank_ids text[] not null check (cardinality(plank_ids) = 12),
   created_at timestamptz not null default now(),
-  revealed_at timestamptz
+  revealed_at timestamptz,
+  -- A player has only two seeds, {user_id}:0:0 and {user_id}:0:1, so this
+  -- caps them at two rounds, even if two "start" requests race.
+  unique (user_id, seed)
 );
 
 -- The policies filter on user_id, so index it.
