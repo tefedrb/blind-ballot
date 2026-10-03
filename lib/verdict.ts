@@ -18,6 +18,8 @@ export type Lean =
 
 export type Projection = { party: Party; assumed: number; actual: number; supported: number };
 
+export type SupportCount = { supported: number; counted: number };
+
 // The Wilson score interval for k supported of n counted. With nothing
 // counted, the support rate could be anything: [0, 1].
 export function wilson(k: number, n: number): { lo: number; hi: number } {
@@ -90,7 +92,8 @@ export function mostRevealing(
 }
 
 // Per party: the cards supported, out of those answered Support or Oppose.
-function supportCounts(answers: RevealedAnswer[]) {
+// These are the three bars on the results page.
+export function supportCounts(answers: RevealedAnswer[]): Record<Party, SupportCount> {
   const counts = {
     D: { supported: 0, counted: 0 },
     R: { supported: 0, counted: 0 },
