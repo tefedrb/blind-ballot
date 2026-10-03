@@ -43,6 +43,19 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 
 ## Decided
 
+### The 24 cards
+
+- **Raised:** 2026-10-03, Task 5, Step 4 (`content/planks.ts`). The spec asks for at least 2 counter-type cards per party, and doesn't require every topic.
+- **Decided:** 2026-10-03. Commit `8d29dfd`.
+  - 3 counter-type cards per party, so the surprises don't lean toward one party.
+  - 11 topics. "Energy and climate" is left out: D's E15 card gives a reason and describes something already done, R's says "mandates", and L's alone would leave the topic with one party.
+  - 7 statements reworded to meet the wording rules, such as "assault weapons" to "certain semi-automatic firearms" and "abortion protections" to "abortion rules". The quotes are unchanged.
+
+### Committing the Desk's draft
+
+- **Raised:** 2026-10-03, Task 5, Step 4. The plan commits `research/candidates.json` and `research/desk.log`; the handoff also listed `research/planks.draft.ts`.
+- **Decided:** 2026-10-03. Commit the draft too, so the header of `content/planks.ts` points to a file that exists, and the edits from draft to deck show in git. Commit `8d29dfd`.
+
 ### The fixture's IDs and the new `card-NN` rule
 
 - **Raised:** 2026-10-02, at the end of Task 4, ahead of Task 5, Step 2. The deck tests run on the fixture first, and its IDs (`fixture-1` to `fixture-24`) would fail the `card-NN` rule.
