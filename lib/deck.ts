@@ -1,5 +1,5 @@
 import "server-only";
-import { PLANKS } from "@/content/planks.fixture";
+import { PLANKS } from "@/content/planks";
 import type { Card, Plank } from "@/content/schema";
 
 // The gate: the only way Play reaches the deck. Every plank carries its party,

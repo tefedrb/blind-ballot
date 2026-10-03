@@ -1,0 +1,13 @@
+
+> desk
+> tsx --env-file=.env.local scripts/research-desk.ts
+
+D: 42864 words (expected about 42864)
+R: 5374 words (expected about 5374)
+L: 3418 words (expected about 3446)
+L: claude-opus-5-5 at effort high, stop_reason end_turn, 7977 in / 6065 out
+D: claude-opus-5-5 at effort high, stop_reason end_turn, 86091 in / 7566 out
+R: claude-opus-5-5 at effort high, stop_reason end_turn, 14038 in / 7924 out
+D: 15 proposed · 15 quote ok · 0 flagged · claude-opus-5-5
+R: 15 proposed · 15 quote ok · 0 flagged · claude-opus-5-5
+L: 15 proposed · 15 quote ok · 0 flagged · claude-opus-5-5
