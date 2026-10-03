@@ -24,6 +24,10 @@ export const PlankSchema = z.object({
 });
 export type Plank = z.infer<typeof PlankSchema>;
 
+// What the player sees: no party, no quote and no source. It lives here, not in
+// lib/deck.ts, so client components can use the type without importing the deck.
+export type Card = Pick<Plank, "id" | "statement" | "topic">;
+
 // What the Research Desk asks Claude for. Plain strings, booleans and the topic
 // enum only: the word limits live in the prompt and the checks. There's no
 // party field, because the party comes from the source platform.
