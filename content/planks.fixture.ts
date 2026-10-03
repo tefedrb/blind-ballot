@@ -35,7 +35,7 @@ const ROWS: [Party, Topic, boolean][] = [
 ];
 
 export const PLANKS: Plank[] = ROWS.map(([party, topic, counterType], i) => ({
-  id: `fixture-${i + 1}`,
+  id: `card-${String(i + 1).padStart(2, "0")}`,
   party,
   topic,
   statement: `Placeholder card ${i + 1} about ${topic.toLowerCase()}, used only while the game loop is built`,
