@@ -1,8 +1,8 @@
-<!-- Copied into the blind-ballot repo root as CLAUDE.md at 0:00 (plan, Task 1, Step 3). Prepared before the timer and disclosed. -->
+<!-- Copied into the blind-ballot repo root as CLAUDE.md at the start of the build (plan, Task 1, Step 3). Prepared in advance and disclosed. -->
 
 # Blind Ballot: working rules for Claude Code
 
-This is a timed, two-hour take-home build. The plan is `docs/plans/blind-ballot-plan.md`, and the spec is `docs/plans/blind-ballot-spec.md`. I have to explain every line in the follow-up interview, so small, plain diffs beat clever ones.
+The plan is `docs/plans/blind-ballot-plan.md`, and the spec is `docs/plans/blind-ballot-spec.md`. I have to be able to explain every line, so small, plain diffs beat clever ones.
 
 ## How we work
 
@@ -19,7 +19,7 @@ This is a timed, two-hour take-home build. The plan is `docs/plans/blind-ballot-
 - **Add an entry under Open** whenever a choice would change the spec, the plan, the security model, the deck's wording rules or the copy, or whenever the plan and the code disagree. Give the options and your recommendation.
 - **At every stop for my review,** point me to any new Open entries.
 - **When I decide,** move the entry to Decided, with the date, my decision and the commit that carries it out.
-- Unlike the handoff, this file keeps its history: it's the record of my decisions for the interview.
+- Unlike the handoff, this file keeps its history: it's the record of my decisions.
 
 ## Test-driven and domain-driven development
 

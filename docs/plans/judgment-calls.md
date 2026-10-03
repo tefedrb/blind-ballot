@@ -2,7 +2,7 @@
 
 A running log of the calls that are mine to make during the build. Claude adds an entry whenever a choice would change the spec, the plan, the security model, the deck's wording rules or the copy, or whenever the plan and the code disagree. Each entry gives the options and Claude's recommendation. When I decide, the entry moves to **Decided** with the date, the decision and the commit that carries it out.
 
-Unlike `handoff.md`, this file keeps its history. It's the record of what I decided, and why, for the interview.
+Unlike `handoff.md`, this file keeps its history. It's the record of what I decided, and why.
 
 ## Open
 
@@ -25,7 +25,7 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 - **Raised:** 2026-10-02, Task 4, Step 7 (`app/page.tsx`, README §2).
 - **The question:** the spec says the "why" is in my own words. Claude drafted it from spec § 1. Keep it, or rewrite it in my voice?
 - **Options:** keep the draft; edit it; rewrite it.
-- **Recommendation:** read it aloud and change anything that doesn't sound like me, because the interview will ask about it. Keep the landing page and README §2 identical.
+- **Recommendation:** read it aloud and change anything that doesn't sound like me, because it's in my voice. Keep the landing page and README §2 identical.
 
 ### The block `next dev` adds to `CLAUDE.md`
 
@@ -50,11 +50,35 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - both use every revealed round. `mostRevealing` would then need every revealed answer as well as this round's.
 - **Recommendation:** each line uses its own answers. This is how it's built now. Both lines name the parties they mean ("you guessed it came from the Democrats"), so they can't contradict each other. It only affects which card qualifies, and only after round 2.
 
+### What the disclosure claims
+
+- **Raised:** 2026-10-03, Task 8, Step 2 (README §9).
+- **The question:** two points in the draft are mine to state:
+  - **"I reviewed and approved each piece."** This is true only once the deferred reviews are done: the Desk code (`fbaa422`), and the leak-check text in README §7 and `/how-it-works`.
+  - **How the spec and the plan were written.** The draft says only that they were prepared in advance, not who wrote them or with what help.
+- **Recommendation:** do the two deferred reviews before calling the README done, so the sentence stays as it is. Then say how the spec and the plan were written.
+
 ## Decided
+
+### The docs lead with my judgment, not the brief
+
+- **Raised:** 2026-10-03, Task 8, Step 2. Several docs framed the work around the brief, not around the product and my reasons for it.
+- **Decided:** 2026-10-03.
+  - Reword that framing in the docs that change as we go: `CLAUDE.md`, this file and the deck's header comment.
+  - Leave the spec and the plan as they are. They're the dated pre-planning records, and git history keeps every version anyway.
+  - Add a README section, "Calls I made", with the decisions behind the design.
+  - Leave out any mention of how fast it was built.
+
+  Commit: the README commit for Task 8.
+
+### README sections that Task 8 doesn't name
+
+- **Raised:** 2026-10-03, Task 8, Step 2. The plan's Step 2 drafts README §§3, 4, 9 and 10. But §1 had no pitch line, and §6 (How it works) and §8 (Tests) were empty. The spec's outline says §6 and §8 are written "as built", and no task did.
+- **Decided:** 2026-10-03. Fill §§1, 6 and 8 in the same draft, from the spec's outline. Commit: the README commit for Task 8.
 
 ### The leak check's per-card review is deferred
 
-- **Raised:** 2026-10-03, Task 7, Step 3, a **[Claude → you check]** step. The check flagged 21 of the 24 cards, and their cues mostly restate the policy. Sorting them into wording and policy, and proposing rewrites, would delay v1.
+- **Raised:** 2026-10-03, Task 7, Step 3, a **[Claude → you check]** step. The check flagged 21 of the 24 cards, and their cues mostly restate the policy. Sorting them into wording and policy, and proposing rewrites, can wait until v1 is deployed.
 - **Decided:** 2026-10-03. Ship v1 first:
   - publish the overall results and the limits in README §7 and `/how-it-works`, committed without stopping for review;
   - leave all 24 cards unchanged, and list the per-card review under "What's incomplete";

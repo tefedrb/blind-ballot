@@ -1,5 +1,5 @@
-// The deck: 24 cards curated from research/planks.draft.ts. It freezes at
-// submission, because the dealer's split depends on the IDs, parties, topics
+// The deck: 24 cards curated from research/planks.draft.ts. It's frozen now
+// that it's live, because the dealer's split depends on the IDs, parties, topics
 // and counter-type flags (spec § 6). Rewording a statement or a quote is safe.
 // The comment above each card gives its Desk ID in research/candidates.json.
 import type { Plank } from "@/content/schema";
