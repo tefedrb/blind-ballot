@@ -2,97 +2,90 @@
 
 The current state of the build, for the next session. Claude rewrites this at every task boundary, then suggests a `/clear`. It holds the current state only; `git log` has the history.
 
-**Updated:** 2026-10-03, after `cf9d8fe` (end of Task 6).
+**Updated:** 2026-10-03, after `d18543c` (end of Task 7).
 
 ## Where we are
 
-- **Done and pushed:** Task 1, Step 6; all of Tasks 2 to 6.
-- **Task 6 shipped as seven commits** rather than the plan's one:
-  - `8716d5b`, the verdict;
-  - `4d0e802`, the share line;
-  - `191b97d`, the results page;
-  - `55753bf`, the judgment-call entry;
-  - `76d9a97`, save;
-  - `0b139c7`, the header and the template deletions;
-  - `cf9d8fe`, `/how-it-works`.
+- **Done and pushed:** Task 1, Step 6; all of Tasks 2 to 7.
+- **Task 7 shipped as two commits:**
+  - `300e84b`, the summary, its tests, the prompt and the script;
+  - `d18543c`, the report in `evals/`, and the results in README §7 and `/how-it-works`.
+- **The leak check's result (3 October):**
+  - neutral statements 21/24 right, original quotes 24/24, a drop of 13 points;
+  - 21 cards flagged, and their cues mostly restate the policy;
+  - $0.92 in total, every call served by `claude-opus-5-5`, no retries.
+- **Next: Task 8, Step 1,** the smoke test on prod in incognito. That's a **[You]** step, so it's the user's turn. Then Step 2, the README's What works, What's incomplete, Disclosure and What's next, which is a **[Claude → you check]** step drafted from the smoke-test results.
 - **Waiting on the user:**
-  - **The plan's prod check for Task 6,** in a fresh incognito window:
-    - play round 1 and look at its results;
-    - press "Play round 2", finish it, and check that the results say "You've seen the whole deck";
-    - press "Save results", then sign out and back in.
-
-    The save upgrade (same `user_id`, no email sent) is also on Task 8's list.
+  - **The smoke test** (Task 8, Step 1). It covers the Task 6 prod check that was still waiting.
+  - **Reviews deferred until after the v1 deploy** (see `docs/plans/judgment-calls.md`, Decided):
+    - the leak-check text in README §7 and `/how-it-works`;
+    - the 21 flagged cards: wording or policy, and any rewrites;
+    - the Desk code, commit `fbaa422`.
   - **Six Open entries in `docs/plans/judgment-calls.md`:**
     - the plain-sounding loaded words;
     - "freedom", "liberty" and "democracy";
-    - the landing "why" in the user's own voice. `/how-it-works` adds a line in the user's voice: "I reviewed and approved every card."
+    - the landing "why" in the user's own voice. `/how-it-works` has a line in the user's voice: "I reviewed and approved every card."
     - the `next dev` block in `CLAUDE.md`;
     - adding `next build` to the pre-push checks;
-    - **new:** which answers decide an Independent's "party they guessed most".
-  - **The deferred review of the Desk code,** commit `fbaa422`.
-- **Next:** Task 7, Step 1: the failing tests for `scripts/lib/leak-summary.ts` (`tests/leak-summary.test.ts`). That's a **[Claude → you check]** step, so show the red run.
+    - which answers decide an Independent's "party they guessed most".
 
 ## Decisions and departures from the plan
 
 The calls the user made are in `docs/plans/judgment-calls.md`. These are Claude's implementation choices.
+
+**The leak check (Task 7):**
+
+- **`summarize(runs)`** (`scripts/lib/leak-summary.ts`) takes one `CardRuns` per card: `{ plankId, party, neutral, original }`, where each version holds 5 `LeakAnswer`s.
+  - It returns `{ cards, neutral, original, drop, flagged }`.
+  - Each version's result is `{ majority, sureness, correct, cues }`. On a tie, `majority` is null and sureness is still the top count over 5 (0.4 for a 2–2–1 split).
+  - The cues come from the runs that named the majority party, with duplicates removed.
+  - `flagged` holds plank IDs. It uses the neutral version only: correct, with sureness ≥ 0.8.
+- **`LeakAnswerSchema`** (`{ party, cues[] }`) is in `content/schema.ts`, next to `CandidatesSchema`.
+- **The tests go beyond the plan's cases:** a sure wrong answer, flagging on the neutral version only, the cues, and an import test that `leak-summary.ts` imports `lib/verdict`.
+- **The script:**
+  - 8 calls at a time, through a small `pool()`;
+  - one retry at effort `low` when the output is unusable; a refusal or a second failure stops the run, and nothing is written;
+  - it reports token totals and the cost at Opus 5.5's list prices, $4 in and $20 out per million. Retried attempts aren't counted. The cost arithmetic is untested, like the models tally next to it; Claude offered to move it into a tested function, and the user went ahead without asking for that.
+- **The prompt** tells Claude to leave `cues` empty when only the policy gave the party away. Claude mostly ignored that and restated the policy.
+- **`/how-it-works` names no cards,** so the page spoils no party. The README names card-03, card-06 and card-19, and uses "repeal the federal income tax" as its example.
 
 **The verdict and results (Task 6):**
 
 - **`lib/verdict.ts`'s API:**
   - The input is a `RevealedAnswer`: `{ plankId, vote, guess, party }`.
   - `lean()` returns `{ verdict: "clear" | "leaning", leader }` or `{ verdict: "too_close", reason: "tie" | "all_unsure" }`.
-  - **`guessSkill(right, total)` returns the p-value.** Task 7 imports it with plain counts.
+  - `guessSkill(right, total)` returns the p-value. The leak check imports it.
   - `projection()` and `mostRevealing()` take `(answers, statedParty)`. Both use a private `measuredParty()`.
   - `supportCounts()` is public, for the three bars.
-- **The verdict tests go beyond the plan's table:**
-  - both bounds for 4/4 and 0/4;
-  - non-backed answers in the first projection case;
-  - near-misses in the first most-revealing case;
-  - an extra most-revealing case for an Independent;
-  - `reason: "tie"`.
 - **`resultsFor(answers, planks, statedParty, dealt)` takes a fourth input,** `dealt`: this round's plank IDs, in deal order.
   - `answers` holds every revealed answer, which the verdict and the findings count together.
   - The card-by-card rows and the most revealing card come from `dealt`.
-  - It throws on an answer whose plank isn't in the deck, and on a dealt card with no answer.
-- **The results page:**
-  - It loads its data with `getRevealedAnswers()` (`lib/player.ts`), which reads revealed rounds only.
-  - It treats a missing stated party as `"none"`.
-  - It reads `is_anonymous` from `getClaims()`, to decide whether to show "Save results".
-  - "Share" is the only client component (`share-button.tsx`), and it gets only the finished line.
-- **The share line:** "Blind Ballot · guessed 8/12 · blind lean: leaning Libertarian · {home URL}". The lean reads "clearly X", "leaning X" or "too close to call", with full party names. The home URL comes from `VERCEL_PROJECT_PRODUCTION_URL`, and falls back to `http://localhost:3000/`.
-- **Save:** `SaveSchema` (`lib/save.ts`) carries the error messages, and `saveResults` shows the first one. The form uses `useActionState`.
-- **Sign in and out:** the login form and the logout button call `router.refresh()` after `router.push("/")`. Next's layouts don't re-render on navigation, so without it the header would stay stale. The save action needs no refresh, because setting cookies in a server action re-renders the layout.
-- **Copy and leftovers:**
-  - The login form says "Sign in" instead of "Login", to match the header.
-  - `components/theme-switcher.tsx` is now unused. The plan didn't list it for deletion, so it stays.
+- **The results page** loads its data with `getRevealedAnswers()` (`lib/player.ts`), which reads revealed rounds only. It treats a missing stated party as `"none"`, and reads `is_anonymous` from `getClaims()` to decide whether to show "Save results". "Share" is the only client component (`share-button.tsx`), and it gets only the finished line.
+- **The share line:** "Blind Ballot · guessed 8/12 · blind lean: leaning Libertarian · {home URL}". The home URL comes from `VERCEL_PROJECT_PRODUCTION_URL`, and falls back to `http://localhost:3000/`.
+- **Save:** `SaveSchema` (`lib/save.ts`) carries the error messages. The form uses `useActionState`.
+- **Sign in and out** call `router.refresh()` after `router.push("/")`, because Next's layouts don't re-render on navigation.
+- **Copy and leftovers:** the login form says "Sign in". `components/theme-switcher.tsx` is unused but stays, since the plan didn't list it for deletion.
 - **`/how-it-works` hard-codes the source links,** copied from `scripts/lib/platforms.ts`, so Play doesn't import the Desk.
 
 **Carried over from earlier tasks:**
 
-- **Pages that read the session export `instant = false`.** Next 16 has Cache Components on, so a page that reads cookies outside `<Suspense>` fails `next build`. The header's `AuthButton` sits inside `<Suspense>` in `app/layout.tsx` instead.
-- **Where things live:**
-  - the `Card` type is in `content/schema.ts`;
-  - the button names are in `lib/labels.ts`;
-  - `getRound(id)`, `getPlayerState()` and `getRevealedAnswers()` are in `lib/player.ts`;
-  - `nextStep()` and `nextCard()` are in `lib/next-step.ts`.
+- **Pages that read the session export `instant = false`.** Next 16 has Cache Components on, so a page that reads cookies outside `<Suspense>` fails `next build`. The header's `AuthButton` sits inside `<Suspense>` in `app/layout.tsx`.
+- **Where things live:** the `Card` type is in `content/schema.ts`; the button names are in `lib/labels.ts`; `getRound(id)`, `getPlayerState()` and `getRevealedAnswers()` are in `lib/player.ts`; `nextStep()` and `nextCard()` are in `lib/next-step.ts`.
 - **`startRound` must be bound:** `startRound.bind(null, party)` or `startRound.bind(null, undefined)`.
-- **Redirects between the round pages:**
-  - the reveal page sends the player back to the round while cards are unanswered, and on to the results once the round is revealed;
-  - the results page gives a 404 for a foreign round and redirects to the round if it isn't revealed.
-- **The deck tests** (`tests/deck.test.ts`):
-  - each rule collects the cards that break it and expects `[]`;
-  - the limits are literals from the spec;
-  - word counts use `countWords` from `scripts/lib/extract.ts`.
+- **Redirects between the round pages:** the reveal page sends the player back to the round while cards are unanswered, and on to the results once revealed. The results page gives a 404 for a foreign round and redirects to the round if it isn't revealed.
+- **The deck tests** (`tests/deck.test.ts`) collect the cards that break each rule and expect `[]`. The limits are literals from the spec, and word counts use `countWords` from `scripts/lib/extract.ts`.
 - **`content/planks.ts` was generated** by a one-off script, since deleted. Each card has a `// Desk:` comment with its original ID.
 - **The fixture is still used** by the dealer and results tests. Its IDs are `card-01` to `card-24`, like the real deck's.
-- **The Desk's retry.** SDK 0.131.0's `parse()` throws an `AnthropicError` when output is cut off or fails the schema, so `research-desk.ts` retries once at effort `medium` on any non-API `AnthropicError`. The leak check should do the same.
+- **SDK 0.131.0's `parse()` throws an `AnthropicError`** when output is cut off or fails the schema. Both scripts retry once at a lower effort on any non-API `AnthropicError`.
+- **SDK 0.131.0's schema transform** sends a string `enum` as a hint in the description, not a constraint. Zod checks the value inside `parse()`.
 - **The Libertarian text** includes lp.org's footer menu.
 - **Task 2 had no red run,** and the Vitest config is `vitest.config.mts`.
 
 ## Gotchas
 
-- **`/how-it-works` has a placeholder for the leak check:** "The results will be published here." Task 7, Step 3 replaces it with the results. If Task 7 is cut, say the check was skipped, in `/how-it-works` and in README.
-- **The repo has no Prettier.** `npx prettier` downloads it and formats at 80 columns, but the code here is written to 100. If you use it, pass `--print-width 100`. Prettier also keeps an object expanded once it has been split across lines, so collapse such objects by hand.
+- **README sections still empty:** What works, How it works, Tests, Disclosure and What I'd build next. Task 8, Step 2 fills the ones the plan names. "What's incomplete" has one bullet so far, the leak check's review.
+- **To dry-run a script that calls Claude for free,** point `ANTHROPIC_BASE_URL` at a small local mock server in `.cache/`, and run `npx tsx` without `--env-file`. Delete the mock and any output afterwards.
+- **The repo has no Prettier.** `npx prettier` formats at 80 columns, but the code here is written to 100. If you use it, pass `--print-width 100`.
 - **TypeScript doesn't narrow `Lean`** after separate checks for `"clear"` and `"leaning"`. Check `verdict === "too_close"` first.
 - **To check pages without a session:** run `npx next build`, then `npx next start -p 3123` in the background, and fetch pages with curl. Stop the server afterwards.
 - **The fixture and the real deck share `card-NN` IDs.** Test only with fresh incognito sessions.

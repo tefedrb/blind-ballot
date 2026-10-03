@@ -52,6 +52,16 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 
 ## Decided
 
+### The leak check's per-card review is deferred
+
+- **Raised:** 2026-10-03, Task 7, Step 3, a **[Claude → you check]** step. The check flagged 21 of the 24 cards, and their cues mostly restate the policy. Sorting them into wording and policy, and proposing rewrites, would delay v1.
+- **Decided:** 2026-10-03. Ship v1 first:
+  - publish the overall results and the limits in README §7 and `/how-it-works`, committed without stopping for review;
+  - leave all 24 cards unchanged, and list the per-card review under "What's incomplete";
+  - review the leak-check text, and then the flagged cards, after the deploy.
+
+  Commit `d18543c`.
+
 ### The 24 cards
 
 - **Raised:** 2026-10-03, Task 5, Step 4 (`content/planks.ts`). The spec asks for at least 2 counter-type cards per party, and doesn't require every topic.
