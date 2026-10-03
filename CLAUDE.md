@@ -12,6 +12,15 @@ This is a timed, two-hour take-home build. The plan is `docs/plans/blind-ballot-
 - You implement everything: code, tests, the deck and its prompts, and the copy. My part is review. I review at every **[Claude → you check]** step and do the final review at the end. Steps still tagged **[You]** are actions only I can take, such as running SQL in the Supabase editor, changing dashboard settings, and the manual checks on prod.
 - If something in the plan doesn't match what you find in the code, stop and say so rather than improvising.
 
+## Judgment calls
+
+`docs/plans/judgment-calls.md` is a running log of the calls that are mine to make.
+
+- **Add an entry under Open** whenever a choice would change the spec, the plan, the security model, the deck's wording rules or the copy, or whenever the plan and the code disagree. Give the options and your recommendation.
+- **At every stop for my review,** point me to any new Open entries.
+- **When I decide,** move the entry to Decided, with the date, my decision and the commit that carries it out.
+- Unlike the handoff, this file keeps its history: it's the record of my decisions for the interview.
+
 ## Test-driven and domain-driven development
 
 **Test-driven.** Every piece of logic starts with a failing test.
@@ -42,7 +51,7 @@ A long session piles up tool output and dead ends, and auto-compact keeps only a
 
 - **At the start of every session,** before anything else, read `docs/plans/handoff.md` and `git log --oneline -10`.
 - **At the end of every task,** after its last commit:
-  1. Rewrite `docs/plans/handoff.md`: where we are, what's next, what's waiting on me, any decisions or departures from the plan that aren't recorded elsewhere, and gotchas. It holds the current state only; git has the history.
+  1. Rewrite `docs/plans/handoff.md`: where we are, what's next, what's waiting on me (including the Open entries in `docs/plans/judgment-calls.md`), any decisions or departures from the plan that aren't recorded elsewhere, and gotchas. It holds the current state only; git has the history.
   2. Commit it, and push.
   3. Tell me it's a good place to `/clear`, and give me the resume line: `Resume Blind Ballot: read CLAUDE.md and docs/plans/handoff.md.`
 - **Mid-task,** if I ask to clear, do the same, and say which step is half-done and what's uncommitted.

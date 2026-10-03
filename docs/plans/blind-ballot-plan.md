@@ -120,6 +120,7 @@ There are two bounded contexts. **Deck authoring** is the scripts, `content/`, `
 - **Schema changes mid-build:** edit `supabase/migrations/0001_init.sql` first, then re-run only the changed statements in the SQL editor. The repo must match the live database at submission.
 - **A bad push late in the build:** use Vercel's Instant Rollback to the last good deployment. Don't debug against the clock.
 - **Context: handoff and clear at task boundaries.** A long session piles up tool output, and auto-compact keeps only a summary of the conversation. So at the end of each task, after its last commit, Claude rewrites `docs/plans/handoff.md`, commits and pushes it, and suggests a `/clear`. To resume, type: `Resume Blind Ballot: read CLAUDE.md and docs/plans/handoff.md.` Auto-compact stays on as the safety net. The repo's `CLAUDE.md`, "Context", has the full rule.
+- **Judgment calls:** [`judgment-calls.md`](judgment-calls.md) logs every call that's mine to make, with Claude's options and recommendation, and what I decided. Claude points me to new entries at each check step, and the handoff lists the open ones. The repo's `CLAUDE.md`, "Judgment calls", has the full rule.
 - **Commits:** commit at every step marked **Commit** and after any other change that stands on its own, and push after each commit so Vercel redeploys. The repo's `CLAUDE.md`, "Saving work", has the full rule.
 - **Traps to check in every diff:**
   - `redirect()` and `notFound()` throw, so they go outside any `try`/`catch`.

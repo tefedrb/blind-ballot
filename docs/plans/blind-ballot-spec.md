@@ -12,6 +12,7 @@ This is the one document to build from. The companion files:
 
 - [`plan.md`](plan.md) is the task-by-task plan, slot by slot.
 - [`repo-CLAUDE.md`](repo-CLAUDE.md) becomes the repo's `CLAUDE.md` at 0:00. It holds the working rules for Claude Code.
+- [`judgment-calls.md`](judgment-calls.md) logs the calls made during the build that change this spec or the plan, and what was decided.
 - [`concept.md`](concept.md) holds how the idea came about, the research, the rival comparison and the dated approval record. Where it differs from this spec, this spec wins.
 - [`_casper-take-home.md`](../_casper-take-home.md) is the brief.
 
