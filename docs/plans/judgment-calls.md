@@ -34,6 +34,13 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 - **Options:** commit it; leave it unstaged, so it shows as modified; remove it each time.
 - **Recommendation:** commit it. It will keep coming back, and its advice is what fixed the Task 4 build: Next 16's Cache Components needed `export const instant = false` on the pages that read the session.
 
+### Add `next build` to the checks before a push
+
+- **Raised:** 2026-10-02, Task 4, Step 7.
+- **The question:** the rule before every push is `npx tsc --noEmit && npm test`. Neither caught Step 7's build failure: with Cache Components on, a page that reads the session outside `<Suspense>` fails only at `next build`, and Vercel would have refused the deploy. Should `npx next build` join the checks?
+- **Options:** run it before every push; run it only when a commit touches `app/`, `lib/` or `next.config.ts`; leave the rule as it is.
+- **Recommendation:** run it whenever a commit touches `app/`, `lib/` or `next.config.ts`. It takes about 20 seconds, and a broken deploy late in the build costs far more.
+
 ## Decided
 
 ### Card IDs mustn't name the party
