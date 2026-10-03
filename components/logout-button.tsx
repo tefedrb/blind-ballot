@@ -10,8 +10,14 @@ export function LogoutButton() {
   const logout = async () => {
     const supabase = createClient();
     await supabase.auth.signOut();
-    router.push("/auth/login");
+    router.push("/");
+    // Layouts don't re-render on navigation, so redraw the header.
+    router.refresh();
   };
 
-  return <Button onClick={logout}>Logout</Button>;
+  return (
+    <Button size="sm" variant="outline" onClick={logout}>
+      Sign out
+    </Button>
+  );
 }
