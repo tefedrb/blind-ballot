@@ -2,7 +2,7 @@
 
 A running log of the calls that are mine to make during the build. Claude adds an entry whenever a choice would change the spec, the plan, the security model, the deck's wording rules or the copy, or whenever the plan and the code disagree. Each entry gives the options and Claude's recommendation. When I decide, the entry moves to **Decided** with the date, the decision and the commit that carries it out.
 
-Unlike `handoff.md`, this file keeps its history. It's the record of what I decided, and why.
+Unlike the handoff, which is private and holds only the current state, this file keeps its history. It's the record of what I decided, and why.
 
 ## Open
 
@@ -51,6 +51,16 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 - **Recommendation:** each line uses its own answers. This is how it's built now. Both lines name the parties they mean ("you guessed it came from the Democrats"), so they can't contradict each other. It only affects which card qualifies, and only after round 2.
 
 ## Decided
+
+### A private space, and the handoff moves into it
+
+- **Raised:** 2026-10-03, after Task 8. I want a place for notes about the project that stay between me and Claude, and the handoff belongs there from now on. The plan's "Handoff" lines say to commit and push it.
+- **Decided:** 2026-10-03.
+  - `private/` holds my notes and the handoff (`private/handoff.md`). `CLAUDE.local.md` holds its rules: use it as context, never commit it, and never copy what's in it into anything public. Both are in `.gitignore`.
+  - Public files may name the setup, as `CLAUDE.md` does, but never carry what's in it.
+  - The handoffs up to 2026-10-03 stay in git history, since history is never rewritten. The plan's "commit and push the handoff" lines no longer apply.
+
+  Commit `a9fa825`.
 
 ### What I'd build next
 
