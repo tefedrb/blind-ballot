@@ -51,3 +51,11 @@ export type Candidate = z.infer<typeof CandidateSchema>;
 
 // Structured output needs an object at the top level.
 export const CandidatesSchema = z.object({ cards: z.array(CandidateSchema) });
+
+// What the leak check asks Claude for, once per run: which party's platform
+// proposed the text, and which words point to that party.
+export const LeakAnswerSchema = z.object({
+  party: PartySchema,
+  cues: z.array(z.string()),
+});
+export type LeakAnswer = z.infer<typeof LeakAnswerSchema>;
