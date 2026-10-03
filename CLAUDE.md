@@ -9,15 +9,32 @@ This is a timed, two-hour take-home build. The plan is `docs/plans/blind-ballot-
 - Do one plan step at a time. At every step tagged **[Claude → you check]**, stop and wait for my review before starting the next step.
 - Write all code in this session; don't hand code-writing to subagents. Subagents are fine for read-only work: looking something up in the template or `node_modules` (use Haiku), or a fresh-eyes check of a **[Claude → you check]** diff against the Security rules before you show it to me.
 - Work directly on `main`. No branches, no worktrees. The plan names superpowers:executing-plans: follow its stop-when-blocked rules, but do one step at a time instead of its batches of three, and skip its worktree and finishing-a-development-branch steps.
-- Some pieces are mine. You may review them, or describe a change in prose, but don't edit them:
-  - `lib/verdict.ts`;
-  - `tests/verdict.test.ts`;
-  - the three checks in `tests/db/rls.test.ts` (you set up the clients);
-  - `content/loaded-words.ts`;
-  - `content/planks.ts`, once I've copied it in;
-  - `scripts/prompts/desk.md`;
-  - all user-facing words on the landing page and `/how-it-works`, and the README's personal sections.
+- You implement everything: code, tests, the deck and its prompts, and the copy. My part is review. I review at every **[Claude → you check]** step and do the final review at the end. Steps still tagged **[You]** are actions only I can take, such as running SQL in the Supabase editor, changing dashboard settings, and the manual checks on prod.
 - If something in the plan doesn't match what you find in the code, stop and say so rather than improvising.
+
+## Test-driven and domain-driven development
+
+**Test-driven.** Every piece of logic starts with a failing test.
+
+1. Write the test from the plan's cases or the spec.
+2. Run it, and confirm it fails for the expected reason: the function is missing or the answer is wrong, not a typo or a setup error.
+3. Write the least code that makes it pass, and rerun it.
+4. Refactor only while the tests stay green.
+
+At a **[Claude → you check]** step, show me the red run as well as the green one. If a test goes green before its code exists, say so: the test isn't testing anything yet. Never edit a test just to make it pass. If a test turns out to be wrong, say why before changing it.
+
+**Domain-driven.** The game's rules live in a pure domain core, and everything else sits around it.
+
+- **Use the spec's words everywhere,** in code, tests, the database and the UI: deck, plank, card, party, stated party, topic, counter-type, round, half, deal, seed, answer, vote, guess, reveal, lean, verdict (clear, leaning, too close), projection, guess skill, most revealing card, candidate, quote check, leak check, sureness. Don't invent synonyms. A *plank* is the full record, with its party. A *card* is what the player sees: `toCard()`.
+- **The domain core is pure:** no I/O, and no imports from `next`, `react`, `@supabase/*`, `@anthropic-ai/*`, `node:fs`, `app/` or `lib/supabase/`. It's the place for the dealer, the verdict, the share line, the quote check, text extraction from HTML, the route rules, the schemas and the topics. Each module is tested directly.
+- **Everything else stays thin:** pages, server actions, the Supabase clients and the scripts' file and network calls. They load data, call the domain, and save or render the result. When a page or action needs a decision, such as where to send the player next, put that decision in a pure domain function and test it.
+- **Two bounded contexts,** joined at one gate:
+  - **Deck authoring:** `scripts/`, `content/`, `research/` and `evals/`.
+  - **Play:** rounds, answers, the reveal and results.
+  - **The gate:** `lib/deck.ts` is the only place Play reads the deck.
+- **Aggregates guard their invariants:**
+  - **A round** owns its answers. The database enforces its rules: 12 cards, one answer per card, insert-only answers, and a reveal only once every card is answered.
+  - **The deck's** rules (promise 4) are enforced by the deck tests.
 
 ## Saving work (commit and push)
 
