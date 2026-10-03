@@ -57,6 +57,7 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - **"I reviewed and approved each piece."** This is true only once the deferred reviews are done: the Desk code (`fbaa422`), and the leak-check text in README §7 and `/how-it-works`.
   - **How the spec and the plan were written.** The draft says only that they were prepared in advance, not who wrote them or with what help.
 - **Recommendation:** do the two deferred reviews before calling the README done, so the sentence stays as it is. Then say how the spec and the plan were written.
+- **Progress:** 2026-10-03. Both reviews are done (`53e5b0d`, `501bf68`), so "I reviewed and approved each piece" stands. How the spec and the plan were written is still open.
 
 ## Decided
 
@@ -85,6 +86,13 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - review the leak-check text, and then the flagged cards, after the deploy.
 
   Commit `d18543c`.
+- **Text reviewed:** 2026-10-03. Every number matched `evals/leak-report.json`. Four fixes, in commit `501bf68`:
+  - `/how-it-works` had the method backwards. Claude names its cue words on every run, and the 4-of-5 rule only decides which cards are flagged.
+  - The check ran after the deck went live, so README §7 says "never during play", not "before deploy".
+  - The drop is "3 cards of 24, or 12.5 points", to match the table's 88%. `evals/leak-report.md` still rounds it to 13; that's left for later.
+  - "None needed a retry" is cut. The run's console output wasn't saved, so nothing in the repo shows it.
+
+  The flagged cards' review is still to do.
 
 ### The 24 cards
 
