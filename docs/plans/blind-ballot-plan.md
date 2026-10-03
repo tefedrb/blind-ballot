@@ -919,12 +919,3 @@ Never cut: sign-in, route access, the blind rules and their database checks, the
 the honest verdict, the deploy, or the README.
 
 Every cut call is yours. **[You]**
-
-## After submission
-
-- **Keep it awake:** Supabase pauses free projects after a week without activity. Until the interview, open the live app
-  every few days. A daily Vercel Cron job that runs one tiny query is the stretch version.
-- **Rehearse:** explain every file, then run one extension live. Candidates:
-  - the daily deck seeded by date;
-  - crowd stats that hide small groups;
-  - blind versus labelled re-votes on the same card.

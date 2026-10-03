@@ -192,7 +192,6 @@ Landing ─Start─▶ Your party ─▶ Cards 1–12 ─▶ Lock in & reveal �
 - **The database schema** lives in `supabase/migrations/0001_init.sql` and is applied in the Supabase SQL editor. For a change mid-build, edit the file first, then re-run only the changed statements. The repo must match the live database at submission.
 - **Test users:** the database tests create anonymous users in the one project and delete them when they finish.
 - **A bad push late in the build:** use Vercel's Instant Rollback to the last good deployment.
-- **After submission:** Supabase pauses free projects after a week without activity. Until the interview, open the live app every few days. A daily Vercel Cron ping is the stretch version.
 
 ## 5. Data model
 
