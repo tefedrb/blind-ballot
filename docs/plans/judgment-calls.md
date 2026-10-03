@@ -52,6 +52,17 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 
 ## Decided
 
+### What I'd build next
+
+- **Raised:** 2026-10-03, after Task 8. The spec fills README §10 with the seams in § 12. I added my own directions: competition, players' history, the bills behind the cards, current events, socialism versus capitalism, defining spin, and cards drafted automatically.
+- **Decided:** 2026-10-03. Four groups: new cards, more to learn from each card, comparing with other players, and labels and spin. Four calls, each Claude's recommendation:
+  - **Automatic cards:** automate the drafting and the grading, but a person still approves every card before it goes live.
+  - **Location:** state only, chosen by the player, with small groups hidden. No city or country.
+  - **Competition:** show where you rank among other players, without a public leaderboard, so guests stay anonymous.
+  - **Socialism versus capitalism:** don't tag cards with either word, since that puts a label back on the card. Test what the words do to a vote, as part of blind versus labelled, and leave the economic side to the two-axis results. No politicians' names in the README.
+
+  Commit `a554328`.
+
 ### What the disclosure claims
 
 - **Raised:** 2026-10-03, Task 8, Step 2 (README §9).
@@ -92,6 +103,7 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - The check ran after the deck went live, so README §7 says "never during play", not "before deploy".
   - The drop is "3 cards of 24, or 12.5 points", to match the table's 88%. `evals/leak-report.md` still rounds it to 13; that's left for later.
   - "None needed a retry" is cut. The run's console output wasn't saved, so nothing in the repo shows it.
+    - **Correction, later the same day:** the output was saved, as `.cache/leak-check.log`, which git ignores. It shows no retry warnings, but retries print to stderr, and it's unclear whether the log captured stderr. The cut stands.
 
   The flagged cards' review is still to do.
 
