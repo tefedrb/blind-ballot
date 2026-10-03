@@ -66,7 +66,7 @@ export const PLANKS: Plank[] = [
     "id": "card-05",
     "party": "D",
     "topic": "Health care",
-    "statement": "Cap insulin costs at $35 a month for all Americans, not just Medicare enrollees.",
+    "statement": "Cap insulin costs at $35 a month for all Americans.",
     "quote": "Now, we'll fight to expand that $35 cap to cover everyone, saving millions of Americans with diabetes nearly $1,000 a year.",
     "source": {
       "doc": "dnc-2024",
@@ -94,7 +94,7 @@ export const PLANKS: Plank[] = [
     "id": "card-07",
     "party": "L",
     "topic": "Retirement",
-    "statement": "Phase out the current Social Security system and replace it with a private, voluntary system.",
+    "statement": "Phase out the current Social Security system and replace it with an optional private system.",
     "quote": "Libertarians would phase out the current government-sponsored Social Security system and transition to a private voluntary system.",
     "source": {
       "doc": "lp-2024",
@@ -178,7 +178,7 @@ export const PLANKS: Plank[] = [
     "id": "card-13",
     "party": "D",
     "topic": "Crime, policing and drugs",
-    "statement": "Fund 100,000 additional police officers and $5 billion for community violence intervention programs.",
+    "statement": "Fund 100,000 additional police officers and $5 billion for local violence intervention programs.",
     "quote": "That includes funding 100,000 additional police officers for accountable community policing and $5 billion in community violence intervention",
     "source": {
       "doc": "dnc-2024",
@@ -220,7 +220,7 @@ export const PLANKS: Plank[] = [
     "id": "card-16",
     "party": "R",
     "topic": "Education",
-    "statement": "Close the federal Department of Education and return control of schooling to the states.",
+    "statement": "Close the federal Department of Education and leave schooling to the states.",
     "quote": "We are going to close the Department of Education in Washington, D.C. and send it back to the States, where it belongs, and let the States run our educational system as it should be run.",
     "source": {
       "doc": "rnc-2024",
@@ -234,7 +234,7 @@ export const PLANKS: Plank[] = [
     "id": "card-17",
     "party": "L",
     "topic": "Education",
-    "statement": "End federal student loan guarantees and let student debt be discharged in bankruptcy like other debt.",
+    "statement": "End federal student loan guarantees and let student debt be discharged in bankruptcy.",
     "quote": "We support ending federal student loan guarantees and special treatment of student loan debt in bankruptcy proceedings.",
     "source": {
       "doc": "lp-2024",
@@ -276,7 +276,7 @@ export const PLANKS: Plank[] = [
     "id": "card-20",
     "party": "R",
     "topic": "Rights and speech",
-    "statement": "Ban federal agencies from working with outside groups to remove lawful speech and defund institutions that do so.",
+    "statement": "Ban federal agencies from working with outside groups to remove lawful speech, and cut funding to institutions that do so.",
     "quote": "We will ban the Federal Government from colluding with anyone to censor Lawful Speech, defund institutions engaged in censorship, and hold accountable all bureaucrats involved with illegal censoring.",
     "source": {
       "doc": "rnc-2024",

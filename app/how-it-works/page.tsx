@@ -164,8 +164,10 @@ export default function HowItWorks() {
           statements it got wrong all come from cards that cut against their party&apos;s type.
         </p>
         <p>
-          The words Claude pointed to mostly restate the policy itself. Sorting out any that are
-          wording, and rewriting those cards, is still to do: the cards are unchanged.
+          The words Claude pointed to mostly restate the policy itself. Where they didn&apos;t,
+          because the words could go without changing the policy and they took one side&apos;s
+          view or argued for it, the card was reworded: 6 cards in all. A second run on the
+          reworded cards gave the same result, because their policies still give them away.
         </p>
         <p>
           The limits: the same family of AI models wrote the statements and tested them, and the

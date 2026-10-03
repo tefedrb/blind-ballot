@@ -27,7 +27,6 @@ Checked on prod in a fresh incognito window on 3 October 2026:
 
 ## What's incomplete
 
-- **The leak check's card-by-card review.** The check flagged 21 of the 24 cards (see "Where Claude fits, and where it doesn't"). Their cues haven't yet been sorted into wording and policy, so no card has been rewritten because of the check. The deck ships as I approved it.
 - **Two rounds per player.** 24 cards make two rounds of 12. After that, the deck is done until more cards arrive.
 - **The reveal comes at the end of a round.** Each round has 4 cards per party, so revealing card by card would let you count your way to the last guesses, and the comparison with luck would no longer hold.
 - **Only the 2024 platforms.**
@@ -97,7 +96,7 @@ If Claude places a card from the party's words but not from the statement, the r
 
 Both are far above the 1 in 3 that luck gets (p < 0.001). That was expected: Claude has read these platforms, and some policies give their party away however plainly they're worded. "Repeal the federal income tax" reads Libertarian, and guessing from the policy is the game.
 
-What judges the wording is the difference. The rewrite made 3 cards harder to place: card-03, card-06 and card-19, all counter-type cards. The other 21 are flagged: Claude placed them from the statement, with at least 4 of 5 runs agreeing. Their cues mostly restate the policy, such as "Raise the federal minimum wage". Sorting out any cues that are wording, and rewriting those cards, is under "What's incomplete".
+What judges the wording is the difference. The rewrite made 3 cards harder to place: card-03, card-06 and card-19, all counter-type cards. The other 21 are flagged: Claude placed them from the statement, with at least 4 of 5 runs agreeing. Claude sorted their cues into wording and policy, and I approved the rewrites. A cue is wording when the policy can be stated without it and it carries one side's framing or a reason. For 15 cards, the cues restate the policy, such as "Raise the federal minimum wage". The other 6 were reworded. For example, "return control of schooling to the states" assumed that Washington runs schooling now, so it became "leave schooling to the states". A second run on the reworded cards gave the same result, 21 of 24 with the same cards flagged: the policies still give those cards away.
 
 The limits:
 
@@ -155,4 +154,4 @@ The rest cover the plumbing: route access, where to send a player next, the shar
 
 - **Blind versus labelled.** Answer a card blind, then again after its reveal. The first answer stays the one that counts. The same test works for other labels, such as "socialist" or "free-market": the game can show what those words do to a vote without taking a side.
 - **Results on two axes,** economic and social: the Nolan chart, drawn by LP co-founder David Nolan.
-- **A sharper definition of spin.** Today the seven wording rules define it, and the leak check measures it. Next: sort the flagged cards' cues into wording and policy, rewrite the cards where it's the wording, and let players flag a card that seems slanted.
+- **A sharper definition of spin.** Today the seven wording rules define it, and the leak check measures it. The flagged cards' cues have been sorted into wording and policy, and the cards with wording cues reworded. Next: let players flag a card that seems slanted.
