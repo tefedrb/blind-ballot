@@ -133,9 +133,24 @@ The rest cover the plumbing: route access, where to send a player next, the shar
 
 ## What I'd build next
 
-- **A daily bill.** One bill a day from Congress.gov, drafted by the Research Desk and graded by the leak check. This is the version people would come back to.
-- **Crowd stats per card,** with small groups hidden. That's Cohen's study running live.
-- **Blind versus labelled.** Answer a card blind, then again after its reveal. The first answer stays the one that counts.
-- **The leak check's review,** then a "this seems slanted" flag on each card, reviewed the same way.
+**New cards**
+
+- **A daily deck.** Each day the Research Desk drafts cards from new bills on Congress.gov, and the quote check and the leak check grade them. They wait in a review queue on an admin page, and a person approves each one before it goes live. This is the version people would come back to.
+- **Current events.** A separate tab for the campaign trail: two candidates' promises on the same issue, and you guess who said which. The same rules apply: quotes word for word, and no names until the reveal.
+
+**More to learn from each card**
+
+- **The bill behind the card.** After the reveal: the bill itself, who sponsored it, who voted for and against it, and where it stands now.
+- **Your history.** Every round you've played, with your answers, your guesses and how your lean has moved.
+
+**Compare with other players**
+
+- **Crowd stats per card,** with small groups hidden: how many players supported each card, and how many guessed its party. That's Cohen's study running live.
+- **Where you rank:** how your guesses compare with other players', and which cards fool the most people. Players who choose to can add their state.
+- **Common ground:** the cards that players of all three parties support.
+
+**Labels and spin**
+
+- **Blind versus labelled.** Answer a card blind, then again after its reveal. The first answer stays the one that counts. The same test works for other labels, such as "socialist" or "free-market": the game can show what those words do to a vote without taking a side.
 - **Results on two axes,** economic and social: the Nolan chart, drawn by LP co-founder David Nolan.
-- **An admin page** with a review queue for the Desk's drafts.
+- **A sharper definition of spin.** Today the seven wording rules define it, and the leak check measures it. Next: sort the flagged cards' cues into wording and policy, rewrite the cards where it's the wording, and let players flag a card that seems slanted.
