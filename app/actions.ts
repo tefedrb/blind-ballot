@@ -14,6 +14,7 @@ import { roundFor } from "@/lib/dealer";
 import { allPlanks } from "@/lib/deck";
 import { nextStep } from "@/lib/next-step";
 import { getPlayerState } from "@/lib/player";
+import { SaveSchema } from "@/lib/save";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
@@ -118,4 +119,34 @@ export async function revealRound(roundId: string) {
   if (error?.message === "round_incomplete") redirect(`/round/${id}`);
   if (error) throw error;
   redirect(`/round/${id}/results`);
+}
+
+export type SaveState = { error: string } | null;
+
+// "Save results": turns a guest into an email account. With "Confirm email"
+// off, Supabase confirms the email at once and keeps the same user ID, so
+// every round carries over (spec § 4).
+export async function saveResults(_: SaveState, formData: FormData): Promise<SaveState> {
+  const input = SaveSchema.safeParse({
+    email: formData.get("email"),
+    password: formData.get("password"),
+  });
+  if (!input.success) return { error: input.error.issues[0].message };
+
+  const { supabase, user } = await requireUser();
+  // An email account is already saved.
+  if (!user.is_anonymous) redirect("/");
+
+  const { error } = await supabase.auth.updateUser(input.data);
+  if (error?.code === "email_exists") {
+    return { error: "That email already has an account — sign in instead." };
+  }
+  if (error) return { error: error.message };
+
+  // The token still says is_anonymous until it's refreshed.
+  const refreshed = await supabase.auth.refreshSession();
+  if (refreshed.error) throw refreshed.error;
+
+  const latest = (await getPlayerState()).revealedRoundIds.at(-1);
+  redirect(latest ? `/round/${latest}/results` : "/");
 }
