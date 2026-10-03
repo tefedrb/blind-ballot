@@ -149,8 +149,28 @@ export default function HowItWorks() {
           A leak check asks Claude to guess each card&apos;s party five times from the statement,
           then five times from the original quote. If Claude does much better on the quotes, the
           rewrite took out spin. When it names a card&apos;s party from the statement in 4 or more
-          of 5 runs, it also says which words pointed there, and those words are reviewed for a
-          rewrite. The results will be published here.
+          of 5 runs, it also says which words pointed there, and those are the words to review for
+          a rewrite.
+        </p>
+        <p>
+          On 3 October 2026, Claude named the right party for 21 of the 24 statements, each time
+          with at least 4 of 5 runs agreeing, and for all 24 quotes. Guessing at random gets 1 in 3
+          right, so both scores are far beyond luck.
+        </p>
+        <p>
+          That was expected. Claude has read these platforms, and some policies give their party
+          away however plainly they&apos;re worded. Guessing from the policy is the game, so the
+          wording is judged by the difference: the rewrite took Claude from 100% to 88%. The 3
+          statements it got wrong all come from cards that cut against their party&apos;s type.
+        </p>
+        <p>
+          The words Claude pointed to mostly restate the policy itself. Sorting out any that are
+          wording, and rewriting those cards, is still to do: the cards are unchanged.
+        </p>
+        <p>
+          The limits: the same family of AI models wrote the statements and tested them, and the
+          words Claude points to are its own account, a hint rather than proof. A panel of people
+          would be the real test.
         </p>
       </section>
 

@@ -1,0 +1,2600 @@
+{
+  "date": "2026-10-03",
+  "models": {
+    "claude-opus-5-5": 240
+  },
+  "tokens": {
+    "input": 123830,
+    "output": 21014
+  },
+  "cost": 0.9156,
+  "summary": {
+    "cards": [
+      {
+        "plankId": "card-01",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Restaurant and Hospitality Workers",
+            "additional Tax Cuts",
+            "Tax Cuts"
+          ]
+        }
+      },
+      {
+        "plankId": "card-02",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        }
+      },
+      {
+        "plankId": "card-03",
+        "party": "R",
+        "neutral": {
+          "majority": "D",
+          "sureness": 0.6,
+          "correct": false,
+          "cues": [
+            "move jobs overseas"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American Policies",
+            "banning companies that outsource jobs",
+            "Buy American and Hire American",
+            "outsource jobs"
+          ]
+        }
+      },
+      {
+        "plankId": "card-04",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "raise the federal minimum wage",
+            "$15-an-hour",
+            "finally",
+            "at least $15-an-hour"
+          ]
+        }
+      },
+      {
+        "plankId": "card-05",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "expand that $35 cap to cover everyone",
+            "Americans with diabetes",
+            "$35 cap",
+            "expand",
+            "cover everyone",
+            "saving millions of Americans with diabetes"
+          ]
+        }
+      },
+      {
+        "plankId": "card-06",
+        "party": "R",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": false,
+          "cues": [
+            "Expand access",
+            "birth control",
+            "IVF fertility treatments",
+            "prenatal care",
+            "Expand access to prenatal care"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "Birth Control",
+            "IVF (fertility treatments)"
+          ]
+        }
+      },
+      {
+        "plankId": "card-07",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        }
+      },
+      {
+        "plankId": "card-08",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 0.8,
+          "correct": true,
+          "cues": []
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CUTS",
+            "NO CHANGES TO THE RETIREMENT AGE",
+            "NO CUTS, INCLUDING NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        }
+      },
+      {
+        "plankId": "card-09",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "unrestricted movement",
+            "people and capital across national borders",
+            "people and capital",
+            "across national borders"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        }
+      },
+      {
+        "plankId": "card-10",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Cut federal funding to cities and counties that refuse to transfer",
+            "arrested immigrants",
+            "federal immigration authorities",
+            "Cut federal funding",
+            "refuse to transfer arrested immigrants to federal immigration authorities",
+            "Cut federal funding to cities and counties"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "dangerous Illegal Alien criminals",
+            "handing them over to ICE",
+            "Illegal Alien criminals"
+          ]
+        }
+      },
+      {
+        "plankId": "card-11",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "emergency power",
+            "during surges",
+            "pause most asylum processing",
+            "pause most asylum processing during surges"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry",
+            "migrants"
+          ]
+        }
+      },
+      {
+        "plankId": "card-12",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Abolish qualified immunity",
+            "police and prosecutors",
+            "police and prosecutors can be sued",
+            "prosecutors can be sued",
+            "prosecutors"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        }
+      },
+      {
+        "plankId": "card-13",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "community violence intervention programs",
+            "100,000 additional police officers",
+            "$5 billion",
+            "Fund 100,000 additional police officers"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "100,000 additional police officers",
+            "accountable community policing",
+            "community violence intervention",
+            "funding 100,000 additional police officers"
+          ]
+        }
+      },
+      {
+        "plankId": "card-14",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "ban assault weapons",
+            "high-capacity magazines",
+            "once again",
+            "once again ban assault weapons"
+          ]
+        }
+      },
+      {
+        "plankId": "card-15",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer",
+            "manufacture, or transfer of firearms"
+          ]
+        }
+      },
+      {
+        "plankId": "card-16",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs",
+            "let the States run our educational system"
+          ]
+        }
+      },
+      {
+        "plankId": "card-17",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "End federal student loan guarantees",
+            "like other debt",
+            "discharged in bankruptcy like other debt"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        }
+      },
+      {
+        "plankId": "card-18",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        }
+      },
+      {
+        "plankId": "card-19",
+        "party": "D",
+        "neutral": {
+          "majority": "R",
+          "sureness": 0.8,
+          "correct": false,
+          "cues": [
+            "Modernize",
+            "nuclear weapons arsenal"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "maintained a commitment"
+          ]
+        }
+      },
+      {
+        "plankId": "card-20",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "remove lawful speech",
+            "defund institutions",
+            "defund institutions that do so"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        }
+      },
+      {
+        "plankId": "card-21",
+        "party": "L",
+        "neutral": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        },
+        "original": {
+          "majority": "L",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "illegitimate practice of marriage licensing",
+            "Until such time as the government stops",
+            "all consenting adults",
+            "government stops its illegitimate practice of marriage licensing"
+          ]
+        }
+      },
+      {
+        "plankId": "card-22",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        }
+      },
+      {
+        "plankId": "card-23",
+        "party": "D",
+        "neutral": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing",
+            "federal election campaigns"
+          ]
+        },
+        "original": {
+          "majority": "D",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        }
+      },
+      {
+        "plankId": "card-24",
+        "party": "R",
+        "neutral": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        },
+        "original": {
+          "majority": "R",
+          "sureness": 1,
+          "correct": true,
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "proof of Citizenship",
+            "same day Voting",
+            "paper ballots"
+          ]
+        }
+      }
+    ],
+    "neutral": {
+      "right": 21,
+      "total": 24,
+      "accuracy": 0.875,
+      "pValue": 6.141354837073435e-8
+    },
+    "original": {
+      "right": 24,
+      "total": 24,
+      "accuracy": 1,
+      "pValue": 3.540706161472145e-12
+    },
+    "drop": 0.125,
+    "flagged": [
+      "card-01",
+      "card-02",
+      "card-04",
+      "card-05",
+      "card-07",
+      "card-08",
+      "card-09",
+      "card-10",
+      "card-11",
+      "card-12",
+      "card-13",
+      "card-14",
+      "card-15",
+      "card-16",
+      "card-17",
+      "card-18",
+      "card-20",
+      "card-21",
+      "card-22",
+      "card-23",
+      "card-24"
+    ]
+  },
+  "runs": [
+    {
+      "plankId": "card-01",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Eliminate federal income taxes on tips"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Restaurant and Hospitality Workers",
+            "additional Tax Cuts"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Restaurant and Hospitality Workers",
+            "additional Tax Cuts"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Tax Cuts"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Tax Cuts"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "eliminate Taxes on Tips",
+            "Tax Cuts"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-02",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal the federal income tax",
+            "abolish the Internal Revenue Service"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "repeal of the income tax",
+            "abolishment of the Internal Revenue Service",
+            "all federal programs and services not required under the U.S. Constitution"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-03",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": []
+        },
+        {
+          "party": "D",
+          "cues": [
+            "move jobs overseas"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "move jobs overseas"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "move jobs overseas"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "move jobs overseas"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American Policies"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American Policies"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American Policies",
+            "banning companies that outsource jobs"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American",
+            "outsource jobs"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "Buy American and Hire American",
+            "banning companies that outsource jobs"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-04",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Raise the federal minimum wage",
+            "$15 an hour"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "raise the federal minimum wage",
+            "$15-an-hour",
+            "finally"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "raise the federal minimum wage",
+            "$15-an-hour",
+            "finally"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "raise the federal minimum wage",
+            "at least $15-an-hour",
+            "finally"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "raise the federal minimum wage",
+            "at least $15-an-hour",
+            "finally"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "raise the federal minimum wage",
+            "$15-an-hour",
+            "finally"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-05",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Cap insulin costs at $35 a month",
+            "not just Medicare enrollees"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "expand that $35 cap to cover everyone",
+            "Americans with diabetes"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "expand that $35 cap to cover everyone",
+            "Americans with diabetes"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "expand that $35 cap to cover everyone",
+            "Americans with diabetes"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "$35 cap",
+            "expand",
+            "cover everyone"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "expand that $35 cap to cover everyone",
+            "saving millions of Americans with diabetes"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-06",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "Expand access",
+            "birth control"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Expand access",
+            "birth control",
+            "IVF fertility treatments"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Expand access",
+            "birth control",
+            "prenatal care"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "birth control",
+            "Expand access to prenatal care"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "prenatal care",
+            "birth control",
+            "IVF fertility treatments"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "Birth Control",
+            "IVF (fertility treatments)"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "Birth Control"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "IVF (fertility treatments)"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "Birth Control",
+            "IVF (fertility treatments)"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "supporting mothers",
+            "Prenatal Care",
+            "Birth Control",
+            "IVF (fertility treatments)"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-07",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Phase out the current Social Security system",
+            "private, voluntary system"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Libertarians",
+            "phase out the current government-sponsored Social Security system",
+            "private voluntary system"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-08",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": []
+        },
+        {
+          "party": "R",
+          "cues": []
+        },
+        {
+          "party": "R",
+          "cues": []
+        },
+        {
+          "party": "D",
+          "cues": [
+            "raising the retirement age"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": []
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CUTS",
+            "NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CUTS, INCLUDING NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CUTS, INCLUDING NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "FIGHT FOR AND PROTECT",
+            "NO CHANGES TO THE RETIREMENT AGE"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-09",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "unrestricted movement",
+            "people and capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "unrestricted movement",
+            "people and capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "unrestricted movement",
+            "people and capital",
+            "across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "unrestricted movement",
+            "people and capital",
+            "across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "unrestricted movement",
+            "people and capital across national borders"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Economic freedom",
+            "unrestricted movement of human as well as financial capital across national borders"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-10",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "Cut federal funding to cities and counties that refuse to transfer",
+            "arrested immigrants",
+            "federal immigration authorities"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Cut federal funding",
+            "refuse to transfer arrested immigrants to federal immigration authorities"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Cut federal funding",
+            "refuse to transfer arrested immigrants to federal immigration authorities"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Cut federal funding to cities and counties",
+            "refuse to transfer arrested immigrants to federal immigration authorities"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Cut federal funding",
+            "refuse to transfer arrested immigrants to federal immigration authorities"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "dangerous Illegal Alien criminals",
+            "handing them over to ICE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "dangerous Illegal Alien criminals",
+            "handing them over to ICE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "dangerous Illegal Alien criminals",
+            "handing them over to ICE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "dangerous Illegal Alien criminals",
+            "handing them over to ICE"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Republicans",
+            "sanctuary jurisdictions",
+            "Illegal Alien criminals",
+            "handing them over to ICE"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-11",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "emergency power",
+            "during surges",
+            "pause most asylum processing"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "emergency power",
+            "during surges"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "emergency power",
+            "pause most asylum processing during surges"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "emergency power",
+            "during surges",
+            "pause most asylum processing"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "emergency power",
+            "during surges",
+            "pause most asylum processing"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry",
+            "migrants"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry",
+            "migrants"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "When the system is overwhelmed",
+            "emergency authority",
+            "safe and orderly process at Ports of Entry"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-12",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "Abolish qualified immunity",
+            "police and prosecutors"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Abolish qualified immunity",
+            "police and prosecutors can be sued"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Abolish qualified immunity",
+            "police and prosecutors can be sued"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Abolish qualified immunity",
+            "prosecutors can be sued"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Abolish qualified immunity",
+            "prosecutors"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "abolition of qualified immunity",
+            "prosecutors would be held legally accountable"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-13",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "community violence intervention programs",
+            "100,000 additional police officers"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "community violence intervention programs",
+            "100,000 additional police officers",
+            "$5 billion"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "community violence intervention programs",
+            "100,000 additional police officers"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "community violence intervention programs",
+            "Fund 100,000 additional police officers"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "community violence intervention programs",
+            "Fund 100,000 additional police officers"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "100,000 additional police officers",
+            "accountable community policing",
+            "community violence intervention"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "100,000 additional police officers",
+            "accountable community policing",
+            "community violence intervention"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "100,000 additional police officers",
+            "accountable community policing",
+            "community violence intervention"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "accountable community policing",
+            "community violence intervention",
+            "funding 100,000 additional police officers"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "100,000 additional police officers",
+            "accountable community policing",
+            "community violence intervention"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-14",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "Reinstate the federal ban",
+            "semi-automatic firearms",
+            "large-capacity magazines"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "ban assault weapons",
+            "high-capacity magazines",
+            "once again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "ban assault weapons",
+            "high-capacity magazines",
+            "once again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "once again ban assault weapons",
+            "high-capacity magazines"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "ban assault weapons",
+            "high-capacity magazines",
+            "once again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "ban assault weapons",
+            "high-capacity magazines",
+            "once again"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-15",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "Repeal all laws",
+            "restricting, registering or monitoring"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer of firearms"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "oppose all laws at any level of government",
+            "restricting, registering, or monitoring",
+            "manufacture, or transfer of firearms"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-16",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Close the federal Department of Education",
+            "return control of schooling to the states"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs",
+            "let the States run our educational system"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "close the Department of Education",
+            "send it back to the States, where it belongs"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-17",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "End federal student loan guarantees",
+            "like other debt"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End federal student loan guarantees",
+            "discharged in bankruptcy like other debt"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End federal student loan guarantees",
+            "like other debt"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End federal student loan guarantees",
+            "like other debt"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End federal student loan guarantees",
+            "like other debt"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "ending federal student loan guarantees",
+            "special treatment of student loan debt in bankruptcy proceedings"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-18",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "End U.S. military and economic aid abroad",
+            "tariffs",
+            "economic sanctions",
+            "regime change efforts"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "end the current U.S. government policies of foreign intervention",
+            "military and economic aid",
+            "tariffs",
+            "economic sanctions",
+            "regime change"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-19",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "Modernize",
+            "nuclear weapons arsenal"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": []
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Modernize",
+            "nuclear weapons arsenal"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Modernize",
+            "nuclear weapons arsenal"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "Modernize",
+            "nuclear weapons arsenal"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "maintained a commitment"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "maintained a commitment"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "maintained a commitment"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "maintained a commitment"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "maintained a commitment"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-20",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "remove lawful speech",
+            "defund institutions"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "remove lawful speech",
+            "defund institutions"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "remove lawful speech",
+            "defund institutions"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "remove lawful speech",
+            "defund institutions that do so"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "remove lawful speech",
+            "defund institutions that do so"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "colluding with anyone to censor Lawful Speech",
+            "defund institutions engaged in censorship",
+            "hold accountable all bureaucrats"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-21",
+      "party": "L",
+      "neutral": [
+        {
+          "party": "L",
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "all consenting adults",
+            "until government stops licensing marriage entirely"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "L",
+          "cues": [
+            "illegitimate practice of marriage licensing",
+            "Until such time as the government stops",
+            "all consenting adults"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "government stops its illegitimate practice of marriage licensing",
+            "all consenting adults"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "government stops its illegitimate practice of marriage licensing",
+            "all consenting adults"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "government stops its illegitimate practice of marriage licensing",
+            "all consenting adults"
+          ]
+        },
+        {
+          "party": "L",
+          "cues": [
+            "government stops its illegitimate practice of marriage licensing",
+            "all consenting adults"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-22",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "restores the abortion rules of Roe v. Wade nationwide"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "With a Democratic Congress",
+            "make Roe the law of the land again"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-23",
+      "party": "D",
+      "neutral": [
+        {
+          "party": "D",
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing",
+            "federal election campaigns"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "constitutional amendment",
+            "banning all private financing"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "D",
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        },
+        {
+          "party": "D",
+          "cues": [
+            "super PACs",
+            "constitutional amendment",
+            "ban all private financing from federal elections"
+          ]
+        }
+      ]
+    },
+    {
+      "plankId": "card-24",
+      "party": "R",
+      "neutral": [
+        {
+          "party": "R",
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "voter ID",
+            "proof of citizenship",
+            "paper ballots"
+          ]
+        }
+      ],
+      "original": [
+        {
+          "party": "R",
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "proof of Citizenship",
+            "same day Voting"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "proof of Citizenship",
+            "same day Voting"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "proof of Citizenship",
+            "same day Voting"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "proof of Citizenship",
+            "same day Voting"
+          ]
+        },
+        {
+          "party": "R",
+          "cues": [
+            "secure our Elections",
+            "Voter ID",
+            "paper ballots",
+            "proof of Citizenship",
+            "same day Voting"
+          ]
+        }
+      ]
+    }
+  ]
+}

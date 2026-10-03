@@ -10,6 +10,8 @@ Party labels change how people judge a policy. In Geoffrey Cohen's 2003 study "P
 
 ## What's incomplete
 
+- **The leak check's card-by-card review.** The check flagged 21 of the 24 cards (see "Where Claude fits, and where it doesn't"). Their cues haven't yet been sorted into wording and policy, so no card has been rewritten because of the check. The deck ships as I approved it.
+
 ## Run it locally
 
 You need Node 22 and a Supabase project.
@@ -40,6 +42,25 @@ From the 45 drafts, 24 cards were chosen: 8 per party, 3 of them against the par
 | Libertarian | [Platform in force for 2024](https://lp.org/platform/) | 15 | 15 | 8 | Claude Opus 5.5 (`claude-opus-5-5`) |
 
 Every call ran at effort `high`, and none fell back to another model. The full record is in `research/candidates.json` and `research/desk.log`.
+
+The leak check (`scripts/leak-check.ts`) tests the wording. It asks Claude which party's platform proposed each card: five times from the neutral statement, then five times from the original quote. That's 240 calls, run by hand before deploy, at effort `medium`. The answers never set a card's party.
+
+| Version | Right | Accuracy | Chance of doing as well by luck |
+| --- | --- | --- | --- |
+| Neutral statement | 21/24 | 88% | < 0.001 |
+| Original quote | 24/24 | 100% | < 0.001 |
+
+Accuracy above chance on the statements was expected. Claude has read these platforms, and some policies give their party away however plainly they're worded: "repeal the federal income tax" reads Libertarian. The number that judges the wording is the drop from the quotes to the statements: 13 points. Claude missed 3 cards from the statement and placed all 3 from the quote: card-03, card-06 and card-19, all counter-type cards.
+
+The other 21 cards are flagged: right from the statement, with at least 4 of 5 runs agreeing. Their cues mostly restate the policy, such as "Raise the federal minimum wage". Sorting wording cues from policy cues is under "What's incomplete". The full results are in `evals/leak-report.md`, and every answer is in `evals/leak-report.json`.
+
+The run on 3 October 2026 used 123,830 input tokens and 21,014 output tokens, thinking included: $0.92 at Opus 5.5's list prices. Claude Opus 5.5 served every call, and none needed a retry.
+
+The limits:
+
+- the same model family wrote the statements and tested them;
+- the cues are Claude's own account, a hint rather than proof;
+- a panel of people would be the real test.
 
 ## Tests
 
