@@ -10,6 +10,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Next's build output, not our source.
+  { ignores: [".next/**"] },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 

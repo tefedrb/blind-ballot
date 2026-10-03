@@ -59,5 +59,7 @@ export default {
       },
     },
   },
+  // The template's plugin load, kept as it is.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
