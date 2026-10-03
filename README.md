@@ -29,6 +29,18 @@ Tests:
 
 ## Where Claude fits, and where it doesn't
 
+Claude never runs in the live app, and it never decides a card's party. It drafts the deck offline, in the Research Desk (`scripts/research-desk.ts`). The Desk gives Claude one party's platform and asks for 15 cards from it. The script labels each card with the party of the platform it came from. It keeps a card only if its quote appears word for word in the source and runs to 40 words at most.
+
+From the 45 drafts, 24 cards were chosen: 8 per party, 3 of them against the party's type. Seven statements were reworded to meet the wording rules, and the quotes are untouched. I reviewed and approved each card.
+
+| Party | Source | Proposed | Passed the quote check | Approved | Model that served |
+| --- | --- | --- | --- | --- | --- |
+| Democratic | [2024 platform](https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform) | 15 | 15 | 8 | Claude Opus 5.5 (`claude-opus-5-5`) |
+| Republican | [2024 platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform) | 15 | 15 | 8 | Claude Opus 5.5 (`claude-opus-5-5`) |
+| Libertarian | [Platform in force for 2024](https://lp.org/platform/) | 15 | 15 | 8 | Claude Opus 5.5 (`claude-opus-5-5`) |
+
+Every call ran at effort `high`, and none fell back to another model. The full record is in `research/candidates.json` and `research/desk.log`.
+
 ## Tests
 
 ## Disclosure
