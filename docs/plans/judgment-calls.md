@@ -50,6 +50,8 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - both use every revealed round. `mostRevealing` would then need every revealed answer as well as this round's.
 - **Recommendation:** each line uses its own answers. This is how it's built now. Both lines name the parties they mean ("you guessed it came from the Democrats"), so they can't contradict each other. It only affects which card qualifies, and only after round 2.
 
+## Decided
+
 ### What the disclosure claims
 
 - **Raised:** 2026-10-03, Task 8, Step 2 (README §9).
@@ -58,8 +60,7 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - **How the spec and the plan were written.** The draft says only that they were prepared in advance, not who wrote them or with what help.
 - **Recommendation:** do the two deferred reviews before calling the README done, so the sentence stays as it is. Then say how the spec and the plan were written.
 - **Progress:** 2026-10-03. Both reviews are done (`53e5b0d`, `501bf68`), so "I reviewed and approved each piece" stands. How the spec and the plan were written is still open.
-
-## Decided
+- **Decided:** 2026-10-03. Keep both lines as they are: the reviews are done, and the spec and the plan stay "prepared in advance". The application note uses the same wording. The flagged cards' review comes after the note is sent.
 
 ### The docs lead with my judgment, not the brief
 
