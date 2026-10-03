@@ -4,6 +4,14 @@ import { TOPICS } from "./topics";
 export const PartySchema = z.enum(["D", "R", "L"]);
 export type Party = z.infer<typeof PartySchema>;
 
+// The party the player says they identify with, asked once before round 1.
+// I is Independent; none is Prefer not to say.
+export const StatedPartySchema = z.enum(["D", "R", "L", "I", "none"]);
+export type StatedParty = z.infer<typeof StatedPartySchema>;
+
+export const VoteSchema = z.enum(["support", "oppose", "unsure"]);
+export type Vote = z.infer<typeof VoteSchema>;
+
 export const TopicSchema = z.enum(TOPICS);
 export type Topic = z.infer<typeof TopicSchema>;
 
