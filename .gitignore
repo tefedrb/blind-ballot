@@ -43,3 +43,7 @@ next-env.d.ts
 
 # local caches (saved source pages)
 .cache/
+
+# private to the developer and Claude: notes and the handoff (rules in CLAUDE.local.md)
+/private/
+/CLAUDE.local.md

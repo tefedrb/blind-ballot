@@ -49,11 +49,11 @@ At a **[Claude → you check]** step, show me the red run as well as the green o
 
 A long session piles up tool output and dead ends, and auto-compact keeps only a summary of the conversation. So we reset at task boundaries instead, starting from a note we wrote on purpose, plus the repo.
 
-- **At the start of every session,** before anything else, read `docs/plans/handoff.md` and `git log --oneline -10`.
-- **At the end of every task,** after its last commit:
-  1. Rewrite `docs/plans/handoff.md`: where we are, what's next, what's waiting on me (including the Open entries in `docs/plans/judgment-calls.md`), any decisions or departures from the plan that aren't recorded elsewhere, and gotchas. It holds the current state only; git has the history.
-  2. Commit it, and push.
-  3. Tell me it's a good place to `/clear`, and give me the resume line: `Resume Blind Ballot: read CLAUDE.md and docs/plans/handoff.md.`
+- **The handoff is private.** It lives in `private/handoff.md`, in a local space for me and Claude that git ignores. `CLAUDE.local.md`, also ignored, holds that space's rules. The handoffs up to 2026-10-03 are in git history, at `docs/plans/handoff.md`.
+- **At the start of every session,** before anything else, read `private/handoff.md` and `git log --oneline -10`.
+- **At the end of every task,** after its last commit and push:
+  1. Rewrite `private/handoff.md`: where we are, what's next, what's waiting on me (including the Open entries in `docs/plans/judgment-calls.md`), any decisions or departures from the plan that aren't recorded elsewhere, and gotchas. It holds the current state only.
+  2. Tell me it's a good place to `/clear`, and give me the resume line: `Resume Blind Ballot: read CLAUDE.md and private/handoff.md.`
 - **Mid-task,** if I ask to clear, do the same, and say which step is half-done and what's uncommitted.
 - Auto-compact stays on as the safety net.
 
@@ -63,7 +63,7 @@ Every time the plan says **Commit**, and after any other change that stands on i
 
 1. Run `npx tsc --noEmit`, plus `npm test` once the test script exists. If anything fails, fix it first. Never commit or push broken work. Vercel type-checks the tests and scripts too, so one type error blocks the deploy.
 2. Use the `/git-commit` skill to write the message. It suggests a few; pick the best one yourself. The plan's **Commit** lines are good starting points.
-3. Stage only this change's files. Never stage `.env*` (except `.env.example`) or `.cache/`.
+3. Stage only this change's files. Never stage `.env*` (except `.env.example`), `.cache/`, `private/` or `CLAUDE.local.md`.
 4. Commit, then `git push`. Vercel redeploys on every push. Tell me the message and that it's pushed.
 
 On a **[Claude → you check]** step, commit only after I say it looks good. If a push fails, stop and tell me. Never force-push or rewrite history. Run `npm run test:db` whenever the migration changes.
@@ -78,7 +78,7 @@ The product's promises depend on these.
   - Never pass a full plank to a client component; use `toCard()`, which gives `{id, statement, topic}`.
   - Results use revealed rounds only.
 - In server actions, identify the user with `supabase.auth.getUser()` before any write with the secret key. Never rely on `getSession()` on the server, and never take a user ID from the browser.
-- Never commit `.env*` (except `.env.example`), `.cache/`, or keys. The Anthropic key lives in `.env.local` and is used only by `scripts/`.
+- Never commit `.env*` (except `.env.example`), `.cache/`, `private/`, `CLAUDE.local.md`, or keys. The Anthropic key lives in `.env.local` and is used only by `scripts/`.
 
 ## Next.js and Supabase traps
 
