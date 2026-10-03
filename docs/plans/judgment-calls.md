@@ -41,6 +41,13 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 - **Options:** run it before every push; run it only when a commit touches `app/`, `lib/` or `next.config.ts`; leave the rule as it is.
 - **Recommendation:** run it whenever a commit touches `app/`, `lib/` or `next.config.ts`. It takes about 20 seconds, and a broken deploy late in the build costs far more.
 
+### The fixture's IDs and the new `card-NN` rule
+
+- **Raised:** 2026-10-02, at the end of Task 4, ahead of Task 5, Step 2.
+- **The question:** Task 5, Step 2 runs the deck tests on the fixture and expects them to pass. The new rule that every ID matches `card-NN` would fail there, because the fixture's IDs are `fixture-1` to `fixture-24`.
+- **Options:** rename the fixture's IDs to `card-01` to `card-24` before Step 2; skip the ID test on the fixture.
+- **Recommendation:** rename them. It's one line in `content/planks.fixture.ts`, the dealer tests don't depend on IDs, and the fixture then models the real deck exactly. Its rows are ordered by topic pair, so the numbers don't follow the party.
+
 ## Decided
 
 ### Card IDs mustn't name the party

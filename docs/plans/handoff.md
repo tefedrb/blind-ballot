@@ -10,12 +10,13 @@ The current state of the build, for the next session. Claude rewrites this at ev
 - **Task 4's manual check passed:** a full round on the placeholder cards, resuming on a refresh, a double-tapped guess, and `/start` redirecting to `/` in incognito. After Reveal, `/round/{id}/results` is a 404, as expected until Task 5.
 - **The Desk has finished.** Every platform succeeded: 15 proposed and 15 passed for each of D, R and L. Counter-type cards: D 6, R 4, L 4. R has no Guns card. Its outputs (`research/candidates.json`, `research/planks.draft.ts`, `research/desk.log`) are untracked on purpose, because Task 5 commits them. Don't stage `research/` before then.
 - **Waiting on the user:**
-  - **Five Open entries in `docs/plans/judgment-calls.md`:**
+  - **Six Open entries in `docs/plans/judgment-calls.md`:**
     - the plain-sounding loaded words;
     - "freedom", "liberty" and "democracy";
     - the landing "why" in the user's own voice;
     - the `next dev` block in `CLAUDE.md`;
-    - adding `next build` to the pre-push checks.
+    - adding `next build` to the pre-push checks;
+    - the fixture's IDs and the new `card-NN` rule. **Settle this one before Task 5, Step 2.**
   - **The deferred review of the Desk code,** commit `fbaa422`.
 - **Next:** Task 5, Step 1: check the Desk's output, which is already fine (see above). Then Step 2: the deck tests, before the deck. That's a **[Claude → you check]** step, and it now includes the test that every ID matches `card-NN`.
 
@@ -37,6 +38,7 @@ The calls the user made are in `docs/plans/judgment-calls.md`. These are Claude'
 
 ## Gotchas
 
+- **Task 5, Step 2 expects the deck tests to pass on the fixture,** but the `card-NN` ID test fails on `fixture-N` IDs. Ask the user about the Open entry first; the recommendation is to rename the fixture's IDs to `card-01` to `card-24`.
 - **Run `npx next build` before pushing page changes.** `tsc` and `npm test` don't catch Cache Components prerender errors, but Vercel's build does.
 - **`next dev` re-adds a block to the end of `CLAUDE.md`.** Until the user decides, keep it out of commits: copy the file aside, strip the block with `perl -0pi -e 's/\n<!-- BEGIN:nextjs-agent-rules -->.*?<!-- END:nextjs-agent-rules -->\n//s' CLAUDE.md`, stage it, then copy the file back.
 - **Rounds dealt from the fixture break once the deck switches,** because `getPlank` throws for unknown IDs. Test only with new sessions after Task 5, Step 3.
