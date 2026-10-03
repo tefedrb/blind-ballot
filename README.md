@@ -136,7 +136,8 @@ The rest cover the plumbing: route access, where to send a player next, the shar
 
 **New cards**
 
-- **A daily deck.** Each day the Research Desk drafts cards from new bills on Congress.gov, and the quote check and the leak check grade them. They wait in a review queue on an admin page, and a person approves each one before it goes live. This is the version people would come back to.
+- **A daily deck.** Each day the Research Desk drafts cards from new bills on Congress.gov, and the quote check and the leak check grade them. They wait in a review queue on an admin page, and a person approves each one before it goes live. A card's party comes from the bill's sponsors, never from Claude. Bills with sponsors from both parties need a rule of their own, and Libertarian cards need another source, since the party has no seats in Congress. This is the version people would come back to.
+- **Local decks.** Start with federal bills, then add a state's or a city's deck once enough players there have joined. A card is drafted once and shared by everyone in its area, so the cost in tokens grows with the number of areas, not the number of players. The person reviewing each card is the real limit. Many local offices are nonpartisan, so those decks may need a different reveal. A ZIP code stored next to someone's answers could identify them, so small areas stay hidden.
 - **Current events.** A separate tab for the campaign trail: two candidates' promises on the same issue, and you guess who said which. The same rules apply: quotes word for word, and no names until the reveal.
 
 **More to learn from each card**
@@ -153,5 +154,6 @@ The rest cover the plumbing: route access, where to send a player next, the shar
 **Labels and spin**
 
 - **Blind versus labelled.** Answer a card blind, then again after its reveal. The first answer stays the one that counts. The same test works for other labels, such as "socialist" or "free-market": the game can show what those words do to a vote without taking a side.
+- **Difficulty levels.** Easy rounds deal the cards whose party is easiest to guess, and hard rounds deal the ones that fool the most players. The leak check's sureness gives each card a first score, and players' own guesses replace it once there are enough of them. The wording stays neutral at every level: the difficulty comes from the policy, never from spin. This needs a bigger deck than 24 cards.
 - **Results on two axes,** economic and social: the Nolan chart, drawn by LP co-founder David Nolan.
 - **A sharper definition of spin.** Today the seven wording rules define it, and the leak check measures it. The flagged cards' cues have been sorted into wording and policy, and the cards with wording cues reworded. Next: let players flag a card that seems slanted.
