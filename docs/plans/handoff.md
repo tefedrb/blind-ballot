@@ -2,36 +2,39 @@
 
 The current state of the build, for the next session. Claude rewrites this at every task boundary, then suggests a `/clear`. It holds the current state only; `git log` has the history.
 
-**Updated:** 2026-10-03, after `d18543c` (end of Task 7).
+**Updated:** 2026-10-03, after `4885571` (Task 8, Step 2).
 
 ## Where we are
 
-- **Done and pushed:** Task 1, Step 6; all of Tasks 2 to 7.
-- **Task 7 shipped as two commits:**
-  - `300e84b`, the summary, its tests, the prompt and the script;
-  - `d18543c`, the report in `evals/`, and the results in README §7 and `/how-it-works`.
-- **The leak check's result (3 October):**
-  - neutral statements 21/24 right, original quotes 24/24, a drop of 13 points;
-  - 21 cards flagged, and their cues mostly restate the policy;
-  - $0.92 in total, every call served by `claude-opus-5-5`, no retries.
-- **Next: Task 8, Step 1,** the smoke test on prod in incognito. That's a **[You]** step, so it's the user's turn. Then Step 2, the README's What works, What's incomplete, Disclosure and What's next, which is a **[Claude → you check]** step drafted from the smoke-test results.
+- **Done and pushed:** Tasks 1 to 7, and Task 8's Steps 1 and 2.
+  - The smoke test on prod passed (the user's step).
+  - The README is filled in: `4885571`. `npm test` passes 143 tests, and `npm run test:db` passes all 6 database checks (run on 2026-10-03).
+- **Next: Task 8, Step 3,** the short note that goes with the application. Claude drafted it in the chat, not in the repo. The user reviews it and sends it.
 - **Waiting on the user:**
-  - **The smoke test** (Task 8, Step 1). It covers the Task 6 prod check that was still waiting.
-  - **Reviews deferred until after the v1 deploy** (see `docs/plans/judgment-calls.md`, Decided):
+  - **Sending the note.**
+  - **Reviews deferred until after the v1 deploy** (`docs/plans/judgment-calls.md`, Decided):
     - the leak-check text in README §7 and `/how-it-works`;
     - the 21 flagged cards: wording or policy, and any rewrites;
     - the Desk code, commit `fbaa422`.
-  - **Six Open entries in `docs/plans/judgment-calls.md`:**
+  - **Seven Open entries in `docs/plans/judgment-calls.md`:**
     - the plain-sounding loaded words;
     - "freedom", "liberty" and "democracy";
-    - the landing "why" in the user's own voice. `/how-it-works` has a line in the user's voice: "I reviewed and approved every card."
+    - the landing "why" in the user's own voice;
     - the `next dev` block in `CLAUDE.md`;
     - adding `next build` to the pre-push checks;
-    - which answers decide an Independent's "party they guessed most".
+    - which answers decide an Independent's "party they guessed most";
+    - **new:** what the disclosure claims. "I reviewed and approved each piece" holds once the deferred reviews are done, and the README doesn't yet say how the spec and the plan were written.
 
 ## Decisions and departures from the plan
 
 The calls the user made are in `docs/plans/judgment-calls.md`. These are Claude's implementation choices.
+
+**The README and the docs (Task 8):**
+
+- **The docs lead with the user's judgment, not the brief.** The README, `CLAUDE.md`, `judgment-calls.md`, the handoff and code comments talk about the product and the user's reasons, never the brief's process or how fast the build went. The spec and the plan stay as they were. Commit messages follow the same rule, since the repo is public.
+- **README "Calls I made"** lists seven design decisions with their reasons, and points to `judgment-calls.md`.
+- **README §§1, 6 and 8** were filled too, though the plan's Step 2 names only §§3, 4, 9 and 10.
+- **`CLAUDE.md` was committed without the `next dev` block:** the index got `HEAD` plus the edits, through `git hash-object -w` and `git update-index --cacheinfo`.
 
 **The leak check (Task 7):**
 
@@ -83,7 +86,6 @@ The calls the user made are in `docs/plans/judgment-calls.md`. These are Claude'
 
 ## Gotchas
 
-- **README sections still empty:** What works, How it works, Tests, Disclosure and What I'd build next. Task 8, Step 2 fills the ones the plan names. "What's incomplete" has one bullet so far, the leak check's review.
 - **To dry-run a script that calls Claude for free,** point `ANTHROPIC_BASE_URL` at a small local mock server in `.cache/`, and run `npx tsx` without `--env-file`. Delete the mock and any output afterwards.
 - **The repo has no Prettier.** `npx prettier` formats at 80 columns, but the code here is written to 100. If you use it, pass `--print-width 100`.
 - **TypeScript doesn't narrow `Lean`** after separate checks for `"clear"` and `"leaning"`. Check `verdict === "too_close"` first.

@@ -69,12 +69,12 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
   - Add a README section, "Calls I made", with the decisions behind the design.
   - Leave out any mention of how fast it was built.
 
-  Commit: the README commit for Task 8.
+  Commit `4885571`.
 
 ### README sections that Task 8 doesn't name
 
 - **Raised:** 2026-10-03, Task 8, Step 2. The plan's Step 2 drafts README §§3, 4, 9 and 10. But §1 had no pitch line, and §6 (How it works) and §8 (Tests) were empty. The spec's outline says §6 and §8 are written "as built", and no task did.
-- **Decided:** 2026-10-03. Fill §§1, 6 and 8 in the same draft, from the spec's outline. Commit: the README commit for Task 8.
+- **Decided:** 2026-10-03. Fill §§1, 6 and 8 in the same draft, from the spec's outline. Commit `4885571`.
 
 ### The leak check's per-card review is deferred
 
