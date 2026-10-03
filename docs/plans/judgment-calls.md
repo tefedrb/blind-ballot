@@ -41,6 +41,15 @@ Unlike `handoff.md`, this file keeps its history. It's the record of what I deci
 - **Options:** run it before every push; run it only when a commit touches `app/`, `lib/` or `next.config.ts`; leave the rule as it is.
 - **Recommendation:** run it whenever a commit touches `app/`, `lib/` or `next.config.ts`. It takes about 20 seconds, and a broken deploy late in the build costs far more.
 
+### Which answers decide an Independent's "party they guessed most"
+
+- **Raised:** 2026-10-03, Task 6, Step 4 (`lib/results.ts`).
+- **The question:** for Independent and Prefer not to say, the projection line and the most revealing card both use "the party they guessed most" (spec § 6, promise 3). The spec doesn't say over which answers. The projection counts every revealed round, but the most revealing card comes from this round's deal order. So after round 2, the two lines could use different parties.
+- **Options:**
+  - each line uses its own answers: the projection every revealed round, the most revealing card this round only;
+  - both use every revealed round. `mostRevealing` would then need every revealed answer as well as this round's.
+- **Recommendation:** each line uses its own answers. This is how it's built now. Both lines name the parties they mean ("you guessed it came from the Democrats"), so they can't contradict each other. It only affects which card qualifies, and only after round 2.
+
 ## Decided
 
 ### The 24 cards
