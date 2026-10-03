@@ -52,6 +52,15 @@ Unlike the handoff, which is private and holds only the current state, this file
 
 ## Decided
 
+### The plan's "After submission" steps
+
+- **Raised:** 2026-10-03, after the flagged-card review.
+- **Decided:** 2026-10-03. Remove the plan's "After submission" section and the spec's matching line.
+  - **Keeping Supabase awake** no longer applies: the project is on the Pro plan, which doesn't pause idle projects.
+  - **The other step** moves to my private notes.
+
+  Commit `de8d8b7`.
+
 ### The flagged cards: which to rewrite
 
 - **Raised:** 2026-10-03, the leak check's card-by-card review (plan, Task 7, Step 3).
