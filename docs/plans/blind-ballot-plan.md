@@ -650,6 +650,7 @@ only that one (`npm run desk -- --party R`) while starting Step 2.
 **Step 2: The deck tests, before the deck** **[Claude → you check]** (`tests/deck.test.ts`). They're promise 4 written as tests, against `allPlanks()`:
 
 - Every card parses with the `Plank` schema, and the IDs are unique.
+- Every ID matches `card-NN`. The browser sees IDs in `toCard()` and in `rounds.plank_ids`, so a Desk ID like `rnc-2024-14` would give the party away.
 - There are exactly 24 cards, 8 per party.
 - There are at least 2 counter-type cards per party.
 - Every topic that appears has cards from at least 2 parties, and at most 4 cards.
@@ -676,7 +677,7 @@ From here on, the deck tests check the real deck.
 - the topic rules met;
 - the spec's wording rules followed, including the ones no test can check: verb first, say what changes and not why, and one register for all three parties.
 
-If a party is short of cards, rerun it with `--party` and take what you need from the new draft. Show the final 24 for review, each with its statement, quote, party and counter-type flag. Then run `npx tsc --noEmit && npm test`. Expected: PASS.
+If a party is short of cards, rerun it with `--party` and take what you need from the new draft. Once the wording is final, renumber the 24 cards `card-01` to `card-24`, ordered by topic and then by statement, so the number says nothing about the party. Show the final 24 for review, each with its statement, quote, party and counter-type flag. Then run `npx tsc --noEmit && npm test`. Expected: PASS.
 
 **Step 5: The bare results page** **[Claude]** (`app/round/[id]/results/page.tsx`):
 

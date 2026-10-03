@@ -208,7 +208,7 @@ Landing ─Start─▶ Your party ─▶ Cards 1–12 ─▶ Lock in & reveal �
 
 **The deck's shape (`Plank`):**
 
-- `id`, for example `rnc-2024-14`;
+- `id`, for example `card-14`. The browser sees it, so it says nothing about the party;
 - `party`: D, R or L;
 - `topic`: one of the 12 (§ 7);
 - `statement`: the neutral wording;
