@@ -147,10 +147,10 @@ export default function HowItWorks() {
         <h2 className="text-xl font-semibold">Has the wording been tested?</h2>
         <p>
           A leak check asks Claude to guess each card&apos;s party five times from the statement,
-          then five times from the original quote. If Claude does much better on the quotes, the
-          rewrite took out spin. When it names a card&apos;s party from the statement in 4 or more
-          of 5 runs, it also says which words pointed there, and those are the words to review for
-          a rewrite.
+          then five times from the original quote, and each time to say which words pointed there.
+          If Claude does much better on the quotes, the rewrite took out spin. When Claude names a
+          card&apos;s party from the statement in 4 or more of 5 runs, the card is flagged, and the
+          words it pointed to are the ones to review for a rewrite.
         </p>
         <p>
           On 3 October 2026, Claude named the right party for 21 of the 24 statements, each time
