@@ -7,9 +7,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { CandidatesSchema, PartySchema, type Party } from "@/content/schema";
+import { CandidatesSchema, type Party } from "@/content/schema";
 import { checkCandidates, toDraftPlanks, type CheckCounts, type CheckedCandidate } from "./lib/candidates";
-import { PLATFORMS } from "./lib/platforms";
+import { PLATFORMS, partiesToRun } from "./lib/platforms";
 import { getSource } from "./lib/sources";
 
 const MODEL = "claude-opus-5-5";
@@ -21,8 +21,7 @@ type CandidatesFile = Partial<Record<Party, PlatformResult>>;
 
 async function main() {
   const args = process.argv.slice(2);
-  const partyArg = args.includes("--party") ? args[args.indexOf("--party") + 1] : undefined;
-  const parties: Party[] = partyArg ? [PartySchema.parse(partyArg)] : ["D", "R", "L"];
+  const parties = partiesToRun(args);
   const refresh = args.includes("--refresh");
 
   const client = new Anthropic();

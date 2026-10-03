@@ -23,7 +23,7 @@ Checked on prod in a fresh incognito window on 3 October 2026:
 - [x] Someone else's round URL gives a 404.
 - [x] During a round, the page source contains no party.
 - [x] `/how-it-works` covers the sources, the wording rules, how results are worked out, the leak check and privacy.
-- [x] `npm test` (143 tests) and `npm run test:db` (6 database checks) pass.
+- [x] `npm test` (147 tests) and `npm run test:db` (6 database checks) pass.
 
 ## What's incomplete
 

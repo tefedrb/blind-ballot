@@ -1,4 +1,4 @@
-import type { Party } from "@/content/schema";
+import { PartySchema, type Party } from "@/content/schema";
 
 type Platform = {
   // How the Desk names the document to Claude.
@@ -32,3 +32,11 @@ export const PLATFORMS: Record<Party, Platform> = {
     expectedWords: 3446,
   },
 };
+
+// The platforms a Desk run covers: all three, or the one named by --party.
+export function partiesToRun(args: string[]): Party[] {
+  if (!args.includes("--party")) return ["D", "R", "L"];
+  const party = PartySchema.safeParse(args[args.indexOf("--party") + 1]);
+  if (!party.success) throw new Error("--party needs D, R or L");
+  return [party.data];
+}
