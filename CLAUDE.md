@@ -45,6 +45,35 @@ At a **[Claude → you check]** step, show me the red run as well as the green o
   - **A round** owns its answers. The database enforces its rules: 12 cards, one answer per card, insert-only answers, and a reveal only once every card is answered.
   - **The deck's** rules (promise 4) are enforced by the deck tests.
 
+## Clean code
+
+We strive for clean code, and Robert C. Martin's *Clean Code* is our bible. Write the way a careful TypeScript and React developer would, with current best practice. Code is read far more often than it's written, so write for the reader.
+
+**From the book:**
+
+- **Names reveal intent.** Name a thing for what it is or does, in the spec's words. No abbreviations, and no vague names like `data`, `info`, `item` or `tmp`.
+- **Functions are small and do one thing,** at one level of abstraction. Keep arguments few; past three, pass an object. No boolean flag arguments: write two functions instead.
+- **No hidden side effects.** A function does what its name says and nothing more. A query returns a value, a command changes state, and no function does both.
+- **Comments say why, not what.** If code needs a comment to say what it does, rename or extract until it doesn't. Delete dead and commented-out code; git keeps it.
+- **One home for each rule.** Don't copy logic into a second place; give it one home, usually the domain, and call it.
+- **Leave code cleaner than you found it,** but only inside the step's scope. Name bigger cleanups to me instead of doing them.
+
+**TypeScript:**
+
+- `strict` stays on. No `any`: take `unknown` and narrow it.
+- Use `as` and `!` only when the type system can't express what you know, such as `Object.keys` on a typed record. Never use them to quiet an error.
+- Derive types from the Zod schemas with `z.infer`; don't write a type twice.
+- Model choices as discriminated unions, and handle every case.
+- Prefer `const`, pure functions and new values over mutating inputs. Use `import type` for type-only imports.
+
+**React:**
+
+- **Import what you use from `react` by name, at the top of the file:** `import { useState, type ReactNode } from "react"`. Never write `React.anything`, such as `React.useState`, `React.ReactNode` or `React.FormEvent`, and never `import React` or `import * as React`. The JSX transform doesn't need `React` in scope.
+- **Server components by default.** Add `"use client"` only where a component needs state, effects or browser events, as far down the tree as it can go.
+- **Function components with a named props type.** No `FC`, no class components, and no `forwardRef`: React 19 passes `ref` as a prop.
+- **Follow the rules of hooks.** Compute derived values during render instead of syncing them with an effect.
+- **Keep components small,** and keep decisions out of them: they belong in the domain (above).
+
 ## Context: handoff and clear at task boundaries
 
 A long session piles up tool output and dead ends, and auto-compact keeps only a summary of the conversation. So we reset at task boundaries instead, starting from a note we wrote on purpose, plus the repo.
